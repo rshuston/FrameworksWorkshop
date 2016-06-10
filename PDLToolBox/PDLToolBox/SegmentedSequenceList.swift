@@ -36,7 +36,7 @@ public class SegmentedSequenceList {
 
     var sequenceList: [(index: Int, value: Any?)]
 
-    init() {
+    public init() {
         sequenceList = []
     }
 
