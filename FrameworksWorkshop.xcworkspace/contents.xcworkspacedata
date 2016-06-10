@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PDLToolBox/PDLToolBox.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:NOTES">
    </FileRef>
 </Workspace>
