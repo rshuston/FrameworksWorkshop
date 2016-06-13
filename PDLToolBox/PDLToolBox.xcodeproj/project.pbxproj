@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E31630E1D0E51E900F1FE0D /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31630D1D0E51E900F1FE0D /* Queue.swift */; };
+		4E3163101D0E520200F1FE0D /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E31630F1D0E520200F1FE0D /* QueueTests.swift */; };
 		4ECE0CC11D0A494D00AAD43A /* PDLToolBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ECE0CC01D0A494D00AAD43A /* PDLToolBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4ECE0CC81D0A494D00AAD43A /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECE0CBD1D0A494D00AAD43A /* PDLToolBox.framework */; };
 		4ECE0CCD1D0A494D00AAD43A /* PDLToolBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE0CCC1D0A494D00AAD43A /* PDLToolBoxTests.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E31630D1D0E51E900F1FE0D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		4E31630F1D0E520200F1FE0D /* QueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		4ECE0CBD1D0A494D00AAD43A /* PDLToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDLToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECE0CC01D0A494D00AAD43A /* PDLToolBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDLToolBox.h; sourceTree = "<group>"; };
 		4ECE0CC21D0A494D00AAD43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				4ECE0CC21D0A494D00AAD43A /* Info.plist */,
 				4ECE0CD71D0A49A400AAD43A /* SegmentedSequenceList.swift */,
 				4ECE0CD81D0A49A400AAD43A /* Stack.swift */,
+				4E31630D1D0E51E900F1FE0D /* Queue.swift */,
 			);
 			path = PDLToolBox;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				4ECE0CCE1D0A494D00AAD43A /* Info.plist */,
 				4ECE0CDB1D0A49AF00AAD43A /* SegmentedSequenceListTests.swift */,
 				4ECE0CDC1D0A49AF00AAD43A /* StackTests.swift */,
+				4E31630F1D0E520200F1FE0D /* QueueTests.swift */,
 			);
 			path = PDLToolBoxTests;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ECE0CDA1D0A49A400AAD43A /* Stack.swift in Sources */,
+				4E31630E1D0E51E900F1FE0D /* Queue.swift in Sources */,
 				4ECE0CD91D0A49A400AAD43A /* SegmentedSequenceList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +225,7 @@
 				4ECE0CDD1D0A49AF00AAD43A /* SegmentedSequenceListTests.swift in Sources */,
 				4ECE0CCD1D0A494D00AAD43A /* PDLToolBoxTests.swift in Sources */,
 				4ECE0CDE1D0A49AF00AAD43A /* StackTests.swift in Sources */,
+				4E3163101D0E520200F1FE0D /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +405,7 @@
 				4ECE0CD31D0A494D00AAD43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4ECE0CD41D0A494D00AAD43A /* Build configuration list for PBXNativeTarget "PDLToolBoxTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +414,7 @@
 				4ECE0CD61D0A494D00AAD43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
