@@ -34,7 +34,7 @@ public class Observer {
         return callHistoryDictionary[name]
     }
 
-    public func getCallRecordFor(name: String, forInvocation invocation: Int) -> [AnyObject?]? {
+    public func getCallRecordFor(name: String, forInvocation invocation: Int = 0) -> [AnyObject?]? {
         guard let callHistory = callHistoryDictionary[name]
             where invocation < callHistory.count
             else {

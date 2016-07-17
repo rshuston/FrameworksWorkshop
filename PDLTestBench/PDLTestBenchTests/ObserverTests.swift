@@ -112,12 +112,30 @@ class ObserverTests: XCTestCase {
     func test_getCallRecordFor_returnsCorrectRecordForRegisteredCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
-        let record = subject.getCallRecordFor("foo", forInvocation: 1)
+        let record_0 = subject.getCallRecordFor("foo", forInvocation: 0)
 
-        XCTAssertEqual(3, record?.count)
-        XCTAssertEqual(4, record?[0] as? Int)
-        XCTAssertEqual(5, record?[1] as? Int)
-        XCTAssertEqual(6, record?[2] as? Int)
+        XCTAssertEqual(3, record_0?.count)
+        XCTAssertEqual(1, record_0?[0] as? Int)
+        XCTAssertEqual(2, record_0?[1] as? Int)
+        XCTAssertEqual(3, record_0?[2] as? Int)
+
+        let record_1 = subject.getCallRecordFor("foo", forInvocation: 1)
+
+        XCTAssertEqual(3, record_1?.count)
+        XCTAssertEqual(4, record_1?[0] as? Int)
+        XCTAssertEqual(5, record_1?[1] as? Int)
+        XCTAssertEqual(6, record_1?[2] as? Int)
+    }
+
+    func test_getCallRecordFor_returnsDefaultRecordOfFirstCall() {
+        subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
+
+        let record_0 = subject.getCallRecordFor("foo")
+
+        XCTAssertEqual(3, record_0?.count)
+        XCTAssertEqual(1, record_0?[0] as? Int)
+        XCTAssertEqual(2, record_0?[1] as? Int)
+        XCTAssertEqual(3, record_0?[2] as? Int)
     }
 
     func test_getCallRecordFor_returnsNilForInvalidInvocationNumber() {

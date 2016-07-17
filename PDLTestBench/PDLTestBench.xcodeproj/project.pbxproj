@@ -66,8 +66,8 @@
 			children = (
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
-				4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */,
 				4E20C4BF1D0A4AB9007F7C2C /* Products */,
+				4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */,
 			);
 			sourceTree = "<group>";
 		};

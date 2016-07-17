@@ -11,9 +11,10 @@
 //
 // NOTE:
 //
-// The FloatingUIAlertController actually resides in the PDLUIToolBox frameworks project.
-// We test it here because the tests need to actually use a properly set up UIApplication
-// and window hierarchy.
+// The FloatingUIAlertController actually resides in the PDLUIToolBox frameworks
+// project. However, we test FloatingUIAlertController.presentStandardAlert()
+// function here because the testing needs to actually use a properly set up
+// UIApplication and window hierarchy.
 //
 
 
