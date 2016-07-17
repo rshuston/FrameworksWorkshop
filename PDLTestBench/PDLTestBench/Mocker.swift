@@ -26,7 +26,11 @@ public class Mocker {
         }
     }
 
-    var returnValuesDictionary: [String : ValueSequencer] = [:]
+    var returnValuesDictionary: [String : ValueSequencer]
+
+    public init() {
+        returnValuesDictionary = [:]
+    }
 
     public func setReturnValue(value: Any?, forName name: String, forInvocation invocation: Int = 0) {
         let vs: ValueSequencer

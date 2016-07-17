@@ -12,7 +12,11 @@ public class Observer {
 
     // Dictionary of call names, containing arrays of parameter lists
     // for each invocation of a call name
-    var callHistoryDictionary: [ String : [ [AnyObject?] ] ] = [:]
+    var callHistoryDictionary: [ String : [ [AnyObject?] ] ]
+
+    public init() {
+        callHistoryDictionary = [:]
+    }
 
     public func recordCallFor(name: String, params: [AnyObject?]) {
         if callHistoryDictionary.keys.contains(name) {
