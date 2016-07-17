@@ -2,12 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:NOTES">
+      location = "group:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PDLUIToolBox/PDLUIToolBox.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PDLTestBench/PDLTestBench.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PDLToolBox/PDLToolBox.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:PDLTestBench/PDLTestBench.xcodeproj">
+      location = "group:NOTES">
    </FileRef>
 </Workspace>

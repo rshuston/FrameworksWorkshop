@@ -66,7 +66,7 @@
 			children = (
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
-				4E53BE451D0A4D47002F21C7 /* Referenced Frameworks */,
+				4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */,
 				4E20C4BF1D0A4AB9007F7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,14 +100,6 @@
 				4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */,
 			);
 			path = PDLTestBenchTests;
-			sourceTree = "<group>";
-		};
-		4E53BE451D0A4D47002F21C7 /* Referenced Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */,
-			);
-			name = "Referenced Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
