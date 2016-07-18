@@ -38,7 +38,7 @@ class FrameworksTestingShellUITests: XCTestCase {
         label = self.app.staticTexts["Bar"]
         exists = NSPredicate(format: "exists == true")
         expectationForPredicate(exists, evaluatedWithObject: label, handler: nil)
-        app.buttons["Button"].tap()
+        app.buttons["Show Alert"].tap()
         waitForExpectationsWithTimeout(5, handler: nil)
         XCTAssert(label.exists)
 

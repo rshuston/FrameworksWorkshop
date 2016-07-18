@@ -24,8 +24,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-5O-7Iu">
-                                <rect key="frame" x="277" y="137" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="263" y="137" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
                                 <connections>
                                     <action selector="buttonWasTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atY-El-N3f"/>
                                 </connections>

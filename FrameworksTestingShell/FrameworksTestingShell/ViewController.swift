@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonWasTouchedUpInside(sender: UIButton) {
-        FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "Button Was Touched",
+        FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "You've now been alerted.",
             action: { (UIAlertAction) -> Void in
                 self.label.text = "Foo"
         },
