@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5AE8F31D3C519C00919E08 /* PDLUIToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E5AE8F41D3C519C00919E08 /* PDLTestBench.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E5AE8F51D3C519C00919E08 /* PDLToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E5AE8FD1D3C51D300919E08 /* FrameworksTestingShellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */; };
 		4EED56501D3BBB6300F06F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */; };
 		4EED56521D3BBB6300F06F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56511D3BBB6300F06F9E /* ViewController.swift */; };
 		4EED56551D3BBB6300F06F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED56531D3BBB6300F06F9E /* Main.storyboard */; };
@@ -23,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4E5AE8FF1D3C51D300919E08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EED56441D3BBB6300F06F9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EED564B1D3BBB6300F06F9E;
+			remoteInfo = FrameworksTestingShell;
+		};
 		4EED56611D3BBB6300F06F9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EED56441D3BBB6300F06F9E /* Project object */;
@@ -33,6 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4E5AE8F21D3C517F00919E08 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4E5AE8F31D3C519C00919E08 /* PDLUIToolBox.framework in Copy Frameworks */,
+				4E5AE8F41D3C519C00919E08 /* PDLTestBench.framework in Copy Frameworks */,
+				4E5AE8F51D3C519C00919E08 /* PDLToolBox.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EED568B1D3BC00900F06F9E /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,6 +73,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellUITests.swift; sourceTree = "<group>"; };
+		4E5AE8FE1D3C51D300919E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EED564C1D3BBB6300F06F9E /* FrameworksTestingShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworksTestingShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EED56511D3BBB6300F06F9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +93,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E5AE8F71D3C51D300919E08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EED56491D3BBB6300F06F9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,11 +120,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E5AE8FB1D3C51D300919E08 /* FrameworksTestingShellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */,
+				4E5AE8FE1D3C51D300919E08 /* Info.plist */,
+			);
+			path = FrameworksTestingShellUITests;
+			sourceTree = "<group>";
+		};
 		4EED56431D3BBB6300F06F9E = {
 			isa = PBXGroup;
 			children = (
 				4EED564E1D3BBB6300F06F9E /* FrameworksTestingShell */,
 				4EED56631D3BBB6300F06F9E /* FrameworksTestingShellTests */,
+				4E5AE8FB1D3C51D300919E08 /* FrameworksTestingShellUITests */,
 				4EED564D1D3BBB6300F06F9E /* Products */,
 				4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */,
 				4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */,
@@ -103,6 +147,7 @@
 			children = (
 				4EED564C1D3BBB6300F06F9E /* FrameworksTestingShell.app */,
 				4EED56601D3BBB6300F06F9E /* FrameworksTestingShellTests.xctest */,
+				4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +178,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4E5AE8F91D3C51D300919E08 /* FrameworksTestingShellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E5AE9011D3C51D300919E08 /* Build configuration list for PBXNativeTarget "FrameworksTestingShellUITests" */;
+			buildPhases = (
+				4E5AE8F61D3C51D300919E08 /* Sources */,
+				4E5AE8F71D3C51D300919E08 /* Frameworks */,
+				4E5AE8F81D3C51D300919E08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E5AE9001D3C51D300919E08 /* PBXTargetDependency */,
+			);
+			name = FrameworksTestingShellUITests;
+			productName = FrameworksTestingShellUITests;
+			productReference = 4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EED56741D3BBB6300F06F9E /* Build configuration list for PBXNativeTarget "FrameworksTestingShell" */;
@@ -140,6 +203,7 @@
 				4EED56481D3BBB6300F06F9E /* Sources */,
 				4EED56491D3BBB6300F06F9E /* Frameworks */,
 				4EED564A1D3BBB6300F06F9E /* Resources */,
+				4E5AE8F21D3C517F00919E08 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +243,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Pinpoint Dynamics";
 				TargetAttributes = {
+					4E5AE8F91D3C51D300919E08 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 4EED564B1D3BBB6300F06F9E;
+					};
 					4EED564B1D3BBB6300F06F9E = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -203,11 +271,19 @@
 			targets = (
 				4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */,
 				4EED565F1D3BBB6300F06F9E /* FrameworksTestingShellTests */,
+				4E5AE8F91D3C51D300919E08 /* FrameworksTestingShellUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E5AE8F81D3C51D300919E08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EED564A1D3BBB6300F06F9E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +304,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E5AE8F61D3C51D300919E08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5AE8FD1D3C51D300919E08 /* FrameworksTestingShellUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EED56481D3BBB6300F06F9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +333,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4E5AE9001D3C51D300919E08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */;
+			targetProxy = 4E5AE8FF1D3C51D300919E08 /* PBXContainerItemProxy */;
+		};
 		4EED56621D3BBB6300F06F9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */;
@@ -276,6 +365,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4E5AE9021D3C51D300919E08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FrameworksTestingShellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FrameworksTestingShell;
+			};
+			name = Debug;
+		};
+		4E5AE9031D3C51D300919E08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FrameworksTestingShellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FrameworksTestingShell;
+			};
+			name = Release;
+		};
 		4EED56721D3BBB6300F06F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -410,6 +521,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E5AE9011D3C51D300919E08 /* Build configuration list for PBXNativeTarget "FrameworksTestingShellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E5AE9021D3C51D300919E08 /* Debug */,
+				4E5AE9031D3C51D300919E08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4EED56471D3BBB6300F06F9E /* Build configuration list for PBXProject "FrameworksTestingShell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

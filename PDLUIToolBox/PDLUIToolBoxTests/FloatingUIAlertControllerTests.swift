@@ -56,6 +56,19 @@ class FloatingUIAlertControllerTests: XCTestCase {
         XCTAssertEqual(callRecord?[0] as? FloatingUIAlertController, subject)
     }
 
+    func test_viewDidDisappear_HidesTheFloatingAlertWindow() {
+        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
+        subject.addAction(action)
+
+        subject.alertWindow = mockWindow
+        mockWindow.hidden = false
+
+        subject.viewDidDisappear(false)
+
+        XCTAssertTrue(mockWindow.hidden)
+    }
+
     class MockUIWindow: UIWindow {
         let observer = Observer()
 
