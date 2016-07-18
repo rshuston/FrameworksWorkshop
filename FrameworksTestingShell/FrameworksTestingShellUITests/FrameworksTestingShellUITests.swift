@@ -29,7 +29,7 @@ class FrameworksTestingShellUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testTappingButtonBringsUpAlert() {
+    func test_TappingShowNormalAlertButtonBringsUpNormalAlert() {
         var label: XCUIElement
         var exists: NSPredicate
 
@@ -38,14 +38,35 @@ class FrameworksTestingShellUITests: XCTestCase {
         label = self.app.staticTexts["Bar"]
         exists = NSPredicate(format: "exists == true")
         expectationForPredicate(exists, evaluatedWithObject: label, handler: nil)
-        app.buttons["Show Alert"].tap()
+        app.buttons["Show Normal Alert"].tap()
         waitForExpectationsWithTimeout(5, handler: nil)
         XCTAssert(label.exists)
 
         label = self.app.staticTexts["Foo"]
         exists = NSPredicate(format: "exists == true")
         expectationForPredicate(exists, evaluatedWithObject: label, handler: nil)
-        app.alerts["Alert"].collectionViews.buttons["OK"].tap()
+        app.alerts["Normal Alert"].collectionViews.buttons["OK"].tap()
+        waitForExpectationsWithTimeout(5, handler: nil)
+        XCTAssert(label.exists)
+    }
+
+    func test_TappingShowFloatingAlertButtonBringsUpFloatingAlert() {
+        var label: XCUIElement
+        var exists: NSPredicate
+
+        XCTAssert(app.staticTexts["Foo"].exists)
+
+        label = self.app.staticTexts["Bar"]
+        exists = NSPredicate(format: "exists == true")
+        expectationForPredicate(exists, evaluatedWithObject: label, handler: nil)
+        app.buttons["Show Floating Alert"].tap()
+        waitForExpectationsWithTimeout(5, handler: nil)
+        XCTAssert(label.exists)
+
+        label = self.app.staticTexts["Foo"]
+        exists = NSPredicate(format: "exists == true")
+        expectationForPredicate(exists, evaluatedWithObject: label, handler: nil)
+        app.alerts["Floating Alert"].collectionViews.buttons["OK"].tap()
         waitForExpectationsWithTimeout(5, handler: nil)
         XCTAssert(label.exists)
     }

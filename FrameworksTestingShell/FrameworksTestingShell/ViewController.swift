@@ -19,14 +19,36 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonWasTouchedUpInside(sender: UIButton) {
-        FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "You've now been alerted.",
+        switch sender.currentTitle {
+        case "Show Normal Alert"?:
+            showNormalAlert()
+        case "Show Floating Alert"?:
+            showFloatingAlert()
+        default:
+            break
+        }
+    }
+
+    func showNormalAlert() {
+        let alertController = UIAlertController(title: "Normal Alert", message: "You've now been alerted.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (UIAlertAction) -> Void in
+            self.label.text = "Foo"
+        })
+        alertController.addAction(alertAction)
+        presentViewController(alertController, animated: true, completion: { (Void) -> Void in
+            self.label.text = "Bar"
+        })
+    }
+
+    func showFloatingAlert() {
+        FloatingUIAlertController.presentStandardAlert(title: "Floating Alert", message: "You've now been alerted.",
             action: { (UIAlertAction) -> Void in
                 self.label.text = "Foo"
-        },
+            },
             completion: { (Void) -> Void in
                 self.label.text = "Bar"
         })
     }
-    
+
 }
 

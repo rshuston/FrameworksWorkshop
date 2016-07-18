@@ -24,10 +24,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCT-5O-7Iu">
-                                <rect key="frame" x="263" y="137" width="75" height="30"/>
-                                <state key="normal" title="Show Alert"/>
+                                <rect key="frame" x="236" y="137" width="129" height="30"/>
+                                <state key="normal" title="Show Normal Alert"/>
                                 <connections>
                                     <action selector="buttonWasTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atY-El-N3f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aso-AF-FTU">
+                                <rect key="frame" x="233" y="183" width="134" height="30"/>
+                                <state key="normal" title="Show Floating Alert"/>
+                                <connections>
+                                    <action selector="buttonWasTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyx-sH-Hwk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,8 +42,10 @@
                         <constraints>
                             <constraint firstItem="jug-xa-X61" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Quc-gx-CEn"/>
                             <constraint firstItem="BCT-5O-7Iu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="atZ-we-jV3"/>
+                            <constraint firstItem="aso-AF-FTU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jZ5-Sd-wDH"/>
                             <constraint firstItem="jug-xa-X61" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="vfB-k4-y6d"/>
                             <constraint firstItem="BCT-5O-7Iu" firstAttribute="top" secondItem="jug-xa-X61" secondAttribute="bottom" constant="16" id="xAu-fq-emb"/>
+                            <constraint firstItem="aso-AF-FTU" firstAttribute="top" secondItem="BCT-5O-7Iu" secondAttribute="bottom" constant="16" id="xV2-EQ-UMj"/>
                         </constraints>
                     </view>
                     <connections>
