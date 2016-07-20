@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E21ADE71D3EEEC2003623EF /* UIViewController+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */; };
 		4E5AE8F31D3C519C00919E08 /* PDLUIToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E5AE8F41D3C519C00919E08 /* PDLTestBench.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E5AE8F51D3C519C00919E08 /* PDLToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionTests.swift"; sourceTree = "<group>"; };
 		4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellUITests.swift; sourceTree = "<group>"; };
 		4E5AE8FE1D3C51D300919E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				4EED56641D3BBB6300F06F9E /* FrameworksTestingShellTests.swift */,
 				4EED56661D3BBB6300F06F9E /* Info.plist */,
 				4EED56871D3BBE4F00F06F9E /* FloatingUIAlertControllerTests.swift */,
+				4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */,
 			);
 			path = FrameworksTestingShellTests;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			files = (
 				4EED56881D3BBE4F00F06F9E /* FloatingUIAlertControllerTests.swift in Sources */,
 				4EED56651D3BBB6300F06F9E /* FrameworksTestingShellTests.swift in Sources */,
+				4E21ADE71D3EEEC2003623EF /* UIViewController+ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +532,7 @@
 				4E5AE9031D3C51D300919E08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EED56471D3BBB6300F06F9E /* Build configuration list for PBXProject "FrameworksTestingShell" */ = {
 			isa = XCConfigurationList;
