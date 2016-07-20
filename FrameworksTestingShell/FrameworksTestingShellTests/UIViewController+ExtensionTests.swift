@@ -6,6 +6,17 @@
 //  Copyright © 2016 Pinpoint Dynamics. All rights reserved.
 //
 
+
+//
+// NOTE:
+//
+// The UIViewController.frontViewController() extension to UIViewController
+// actually resides in the PDLUIToolBox frameworks project. However, we need
+// to test the function here because the tests need to actually use a properly
+// set up UIApplication and window hierarchy.
+//
+
+
 import XCTest
 
 class UIViewController_ExtensionTests: XCTestCase {
@@ -26,7 +37,15 @@ class UIViewController_ExtensionTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_frontViewController_FindsRootView() {
+    func test_frontViewController_HandlesEmptyViewControllerHierarchy() {
+        appWindow.makeKeyWindow()
+
+        let frontViewController = UIViewController.frontViewController()
+
+        XCTAssertNil(frontViewController)
+    }
+
+    func test_frontViewController_FindsRootViewController() {
         let rootViewController = UIViewController()
         appWindow.rootViewController = rootViewController
         appWindow.makeKeyWindow()
@@ -36,7 +55,17 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === rootViewController)
     }
 
-    func test_frontViewController_FindsPresentedViewOfSubclass() {
+    func test_frontViewController_FindsRootViewControllerOfSubclass() {
+        let rootViewController = TestUIViewController()
+        appWindow.rootViewController = rootViewController
+        appWindow.makeKeyWindow()
+
+        let frontViewController = UIViewController.frontViewController()
+
+        XCTAssert(frontViewController === rootViewController)
+    }
+    
+    func test_frontViewController_FindsPresentedViewControllerOfSubclass() {
         let rootViewController = UIViewController()
         let rootView = UIView(frame: frameRect)
         rootViewController.view = rootView
@@ -52,7 +81,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === presentedController)
     }
 
-    func test_frontViewController_FindsSplitView() {
+    func test_frontViewController_FindsSplitViewController() {
         let splitViewController = UISplitViewController()
         let masterViewController = UIViewController()
         let detailViewController = UIViewController()
@@ -66,7 +95,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === detailViewController)
     }
 
-    func test_frontViewController_FindsSplitViewOfSubclasses() {
+    func test_frontViewController_FindsSplitViewControllerOfSubclasses() {
         let splitViewController = TestUISplitViewController()
         let masterViewController = TestUIViewController()
         let detailViewController = TestUIViewController()
@@ -80,7 +109,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === detailViewController)
     }
 
-    func test_frontViewController_FindsNavigationView() {
+    func test_frontViewController_FindsNavigationViewController() {
         let navigationViewController = UINavigationController()
         appWindow.rootViewController = navigationViewController
         let pushedViewController = UIViewController()
@@ -93,7 +122,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === pushedViewController)
     }
 
-    func test_frontViewController_FindsNavigationViewOfSubclass() {
+    func test_frontViewController_FindsNavigationViewControllerOfSubclass() {
         let navigationViewController = TestUINavigationController()
         appWindow.rootViewController = navigationViewController
         let pushedViewController = TestUIViewController()
@@ -106,7 +135,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === pushedViewController)
     }
 
-    func test_frontViewController_FindsTabBarView() {
+    func test_frontViewController_FindsTabBarViewController() {
         let tabBarViewController = UITabBarController()
         appWindow.rootViewController = tabBarViewController
         let firstViewController = UIViewController()
@@ -121,7 +150,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === secondViewController)
     }
 
-    func test_frontViewController_FindsTabBarViewOfSubclasses() {
+    func test_frontViewController_FindsTabBarViewControllerOfSubclasses() {
         let tabBarViewController = TestUITabBarController()
         appWindow.rootViewController = tabBarViewController
         let firstViewController = TestUIViewController()
@@ -136,7 +165,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         XCTAssert(frontViewController === secondViewController)
     }
 
-    func test_frontViewController_FindsViewInCombinationHierarchy() {
+    func test_frontViewController_FindsFrontViewControllerInCombinationHierarchy() {
         let tabBarViewController = TestUITabBarController()
         appWindow.rootViewController = tabBarViewController
         let navigationViewController = TestUINavigationController()

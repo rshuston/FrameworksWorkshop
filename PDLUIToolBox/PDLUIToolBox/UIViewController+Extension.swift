@@ -10,6 +10,11 @@ import UIKit
 
 public extension UIViewController {
 
+    // Find the front view controller by traversing the view controller hierachy
+    public class func frontViewController() -> UIViewController? {
+        return _findBestViewControllerFrom(UIApplication.sharedApplication().keyWindow?.rootViewController)
+    }
+
     // Private recusive search function to find best front view controller
     private class func _findBestViewControllerFrom(viewController: UIViewController?) -> UIViewController? {
         var bestViewController: UIViewController?
@@ -38,10 +43,6 @@ public extension UIViewController {
         }
 
         return bestViewController
-    }
-
-    public class func frontViewController() -> UIViewController? {
-        return _findBestViewControllerFrom(UIApplication.sharedApplication().keyWindow?.rootViewController)
     }
 
 }

@@ -11,8 +11,8 @@
 // NOTE:
 //
 // The testing of the FloatingUIAlertController.presentStandardAlert() function
-// resides in the tests for the FrameworksTestingShell project since it needs to
-// rely on the existence of an actual UIApplication and UIWindow structure.
+// resides in the tests for the FrameworksTestingShell project since it needs
+// to rely on the existence of an actual UIApplication and UIWindow structure.
 //
 
 
