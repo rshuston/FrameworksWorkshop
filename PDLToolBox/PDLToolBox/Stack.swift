@@ -10,6 +10,10 @@ import Foundation
 
 public class Stack {
 
+    // A stack is a LIFO buffer implemented as an array of "Any?" items. Push
+    // operations add to the end of the array. Pop operations remove from the
+    // end of the array.
+
     var stack: [Any?]
 
     public init() {

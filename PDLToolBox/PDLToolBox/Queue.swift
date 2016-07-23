@@ -10,6 +10,10 @@ import Foundation
 
 public class Queue {
 
+    // A queue is a FIFO buffer implemented as an array of "Any?" items. Enqueue
+    // operations add to the end of the array. Dequeue operations remove from
+    // the beginning of the array.
+
     var queue: [Any?]
 
     public init() {

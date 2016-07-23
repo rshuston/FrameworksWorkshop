@@ -60,6 +60,23 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(true, subject.queue[subject.queue.count - 1] as? Bool)
     }
 
+    func test_enqueue_operatesWithClosureItems() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.queue = [1, 2.0]
+
+        subject.enqueue(three)
+
+        XCTAssertEqual(3, subject.queue.count)
+        let closure = subject.queue[subject.queue.count - 1] as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
     func test_enqueue_operatesWithComplexItems() {
         subject.queue = [1, "two", 3.0]
 
@@ -102,7 +119,25 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(1, dequeued.value as? Int)
     }
 
-    func test_pop_operatesWithComplexItems() {
+    func test_dequeue_operatesWithClosureItems() {
+        var testValue = 0
+        let one = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.queue = [one, 2.0, 3]
+
+        let dequeued = subject.dequeue()
+
+        XCTAssertEqual(2, subject.queue.count)
+        XCTAssertTrue(dequeued.success)
+        let closure = dequeued.value as? ((Int) -> Bool)
+        let answer = closure?(1) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 1)
+    }
+
+    func test_dequeue_operatesWithComplexItems() {
         subject.queue = [(first: 1, second: 2.0), 2, "three", 4.0]
 
         let dequeued = subject.dequeue()
@@ -114,7 +149,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(2.0, dequeuedValue?.second)
     }
 
-    func test_pop_operatesWithNilItems() {
+    func test_dequeue_operatesWithNilItems() {
         subject.queue = [nil, 2, "three", 4.0]
 
         let dequeued = subject.dequeue()
@@ -124,7 +159,7 @@ class QueueTests: XCTestCase {
         XCTAssertNil(dequeued.value)
     }
 
-    func test_pop_operatesWithEmptyStack() {
+    func test_dequeue_operatesWithEmptyStack() {
         subject.queue = []
 
         let dequeued = subject.dequeue()

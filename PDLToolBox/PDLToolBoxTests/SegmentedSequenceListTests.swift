@@ -133,6 +133,27 @@ class SegmentedSequenceListTests: XCTestCase {
         XCTAssertEqual(3.0, entry2.value as? Double)
     }
 
+    func test_setValue_addsClosureEntries() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.sequenceList = [(1, "value1")]
+
+        subject.setValue(three, forIndex: 3)
+
+        XCTAssertEqual(2, subject.sequenceList.count)
+        let entry1 = subject.sequenceList[0]
+        XCTAssertEqual(1, entry1.index)
+        XCTAssertEqual("value1", entry1.value as? String)
+        let entry2 = subject.sequenceList[1]
+        let closure = entry2.value as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
     func test_setValue_addsNilEntries() {
         subject.sequenceList = [(1, "value1")]
 
@@ -219,7 +240,28 @@ class SegmentedSequenceListTests: XCTestCase {
         XCTAssertEqual("value6", result.value as? String)
     }
 
-    func test_getValueFor_retrievesNilValues() {
+    func test_getValueFor_retrievesClosureEntries() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.sequenceList = [
+            (1, "value1"),
+            (3, three),
+            (6, "value6")
+        ]
+
+        let result = subject.getValueFor(4)
+
+        XCTAssertTrue(result.success)
+        let closure = result.value as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
+    func test_getValueFor_retrievesNilEntries() {
         subject.sequenceList = [
             (1, "value1"),
             (3, nil),

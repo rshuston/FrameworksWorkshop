@@ -60,6 +60,23 @@ class StackTests: XCTestCase {
         XCTAssertEqual(true, subject.stack[subject.stack.count - 1] as? Bool)
     }
 
+    func test_push_operatesWithClosureItems() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.stack = [1, 2.0]
+
+        subject.push(three)
+
+        XCTAssertEqual(3, subject.stack.count)
+        let closure = subject.stack[subject.stack.count - 1] as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
     func test_push_operatesWithComplexItems() {
         subject.stack = [1, "two", 3.0]
 
@@ -100,6 +117,24 @@ class StackTests: XCTestCase {
         XCTAssertEqual(3, subject.stack.count)
         XCTAssertTrue(popped.success)
         XCTAssertEqual(true, popped.value as? Bool)
+    }
+
+    func test_pop_operatesWithClosureItems() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.stack = [1, 2.0, three]
+
+        let popped = subject.pop()
+
+        XCTAssertEqual(2, subject.stack.count)
+        XCTAssertTrue(popped.success)
+        let closure = popped.value as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
     }
 
     func test_pop_operatesWithComplexItems() {
