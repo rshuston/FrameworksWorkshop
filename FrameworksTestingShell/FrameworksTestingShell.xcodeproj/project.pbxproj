@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E21ADE71D3EEEC2003623EF /* UIViewController+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */; };
 		4E5AE8F31D3C519C00919E08 /* PDLUIToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4E5AE8F41D3C519C00919E08 /* PDLTestBench.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4E5AE8F51D3C519C00919E08 /* PDLToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E5AE8FD1D3C51D300919E08 /* FrameworksTestingShellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */; };
 		4EED56501D3BBB6300F06F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */; };
 		4EED56521D3BBB6300F06F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56511D3BBB6300F06F9E /* ViewController.swift */; };
@@ -18,13 +16,8 @@
 		4EED56571D3BBB6300F06F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EED56561D3BBB6300F06F9E /* Assets.xcassets */; };
 		4EED565A1D3BBB6300F06F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED56581D3BBB6300F06F9E /* LaunchScreen.storyboard */; };
 		4EED56651D3BBB6300F06F9E /* FrameworksTestingShellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56641D3BBB6300F06F9E /* FrameworksTestingShellTests.swift */; };
-		4EED56821D3BBD3F00F06F9E /* PDLTestBench.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */; };
-		4EED56831D3BBD3F00F06F9E /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */; };
 		4EED56861D3BBDDB00F06F9E /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */; };
 		4EED56881D3BBE4F00F06F9E /* FloatingUIAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56871D3BBE4F00F06F9E /* FloatingUIAlertControllerTests.swift */; };
-		4EED568C1D3BC02500F06F9E /* PDLUIToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4EED568D1D3BC02500F06F9E /* PDLTestBench.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4EED568E1D3BC02500F06F9E /* PDLToolBox.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,21 +45,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				4E5AE8F31D3C519C00919E08 /* PDLUIToolBox.framework in Copy Frameworks */,
-				4E5AE8F41D3C519C00919E08 /* PDLTestBench.framework in Copy Frameworks */,
-				4E5AE8F51D3C519C00919E08 /* PDLToolBox.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EED568B1D3BC00900F06F9E /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4EED568C1D3BC02500F06F9E /* PDLUIToolBox.framework in Copy Frameworks */,
-				4EED568D1D3BC02500F06F9E /* PDLTestBench.framework in Copy Frameworks */,
-				4EED568E1D3BC02500F06F9E /* PDLToolBox.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,8 +66,6 @@
 		4EED56601D3BBB6300F06F9E /* FrameworksTestingShellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED56641D3BBB6300F06F9E /* FrameworksTestingShellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellTests.swift; sourceTree = "<group>"; };
 		4EED56661D3BBB6300F06F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLTestBench.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphonesimulator/PDLTestBench.framework"; sourceTree = "<group>"; };
-		4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphonesimulator/PDLToolBox.framework"; sourceTree = "<group>"; };
 		4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLUIToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphonesimulator/PDLUIToolBox.framework"; sourceTree = "<group>"; };
 		4EED56871D3BBE4F00F06F9E /* FloatingUIAlertControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingUIAlertControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +83,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EED56861D3BBDDB00F06F9E /* PDLUIToolBox.framework in Frameworks */,
-				4EED56831D3BBD3F00F06F9E /* PDLToolBox.framework in Frameworks */,
-				4EED56821D3BBD3F00F06F9E /* PDLTestBench.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,16 +105,22 @@
 			path = FrameworksTestingShellUITests;
 			sourceTree = "<group>";
 		};
+		4E613BA21D4403AA00607F82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EED56431D3BBB6300F06F9E = {
 			isa = PBXGroup;
 			children = (
 				4EED564E1D3BBB6300F06F9E /* FrameworksTestingShell */,
 				4EED56631D3BBB6300F06F9E /* FrameworksTestingShellTests */,
 				4E5AE8FB1D3C51D300919E08 /* FrameworksTestingShellUITests */,
+				4E613BA21D4403AA00607F82 /* Frameworks */,
 				4EED564D1D3BBB6300F06F9E /* Products */,
-				4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */,
-				4EED567F1D3BBD3F00F06F9E /* PDLTestBench.framework */,
-				4EED56801D3BBD3F00F06F9E /* PDLToolBox.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,7 +204,6 @@
 				4EED565C1D3BBB6300F06F9E /* Sources */,
 				4EED565D1D3BBB6300F06F9E /* Frameworks */,
 				4EED565E1D3BBB6300F06F9E /* Resources */,
-				4EED568B1D3BC00900F06F9E /* Copy Frameworks */,
 			);
 			buildRules = (
 			);

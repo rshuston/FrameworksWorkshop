@@ -1,3 +1,42 @@
+FrameworksTestingShell
+  |
+  |-> PDLUIToolBox
+
+FrameworksTestingShellTests
+  |
+  |-> FrameworksTestingShell
+
+
+
+PDLUIToolBox
+
+PDLUIToolBoxTests
+  |
+  |-> PDLUIToolBox
+  |-> PDLTestBench
+
+
+
+PDLTestBench
+  |
+  |-> PDLToolBox
+
+PDLTestBenchTests
+  |
+  |-> PDLTestBench
+
+
+
+PDLToolBox
+
+PDLToolBoxTests
+|
+|-> PDLToolBox
+
+
+
+
+
 Testing:
 • Fake objects actually have working implementations, but usually take some shortcut which makes them not suitable for production. A good example of this is the in-memory database.
 • Stubs provide canned answers to calls made during the test, usually not responding at all to anything outside what’s programmed in for the test.
