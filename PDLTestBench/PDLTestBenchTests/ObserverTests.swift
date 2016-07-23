@@ -59,6 +59,33 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(5.0, params1?[2] as? Double)
     }
 
+    func test_recordCallFor_recordsClosureParameters() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.callHistoryDictionary = [:]
+
+        subject.recordCallFor("foo", params: [1, "one"])
+        subject.recordCallFor("foo", params: [3, three])
+
+        XCTAssertEqual(1, subject.callHistoryDictionary.count)
+        let callRecords = subject.callHistoryDictionary["foo"]
+        XCTAssertEqual(2, callRecords?.count)
+        let params0 = callRecords?[0]
+        XCTAssertEqual(2, params0?.count)
+        XCTAssertEqual(1, params0?[0] as? Int)
+        XCTAssertEqual("one", params0?[1] as? String)
+        let params1 = callRecords?[1]
+        XCTAssertEqual(2, params1?.count)
+        XCTAssertEqual(3, params1?[0] as? Int)
+        let closure = params1?[1] as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
     func test_getCallCountFor_returnsCorrectNumberForFirstCall() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3]]]
 
@@ -136,6 +163,23 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(1, record_0?[0] as? Int)
         XCTAssertEqual(2, record_0?[1] as? Int)
         XCTAssertEqual(3, record_0?[2] as? Int)
+    }
+
+    func test_getCallRecordFor_returnsCorrectRecordContainingClosure() {
+        var testValue = 0
+        let three = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.callHistoryDictionary = ["foo": [[1, 2, three],[4, 5, 6]]]
+
+        let record_0 = subject.getCallRecordFor("foo", forInvocation: 0)
+
+        XCTAssertEqual(3, record_0?.count)
+        let closure = record_0?[2] as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
     }
 
     func test_getCallRecordFor_returnsNilForInvalidInvocationNumber() {

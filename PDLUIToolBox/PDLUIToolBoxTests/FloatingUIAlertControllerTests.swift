@@ -56,6 +56,31 @@ class FloatingUIAlertControllerTests: XCTestCase {
         XCTAssertEqual(callRecord?[0] as? FloatingUIAlertController, subject)
     }
 
+
+    func test_show_PresentsWithAnimationFlagAndCompletionHandler() {
+        var completed = false
+        let completionClosure = { ()->Void in
+            completed = true
+        }
+
+        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
+        subject.addAction(action)
+
+        subject.alertWindow = mockWindow
+
+        subject.show(animated: true, completion: completionClosure)
+
+        XCTAssertEqual(mockWindow.observer.getCallCountFor("makeKeyAndVisible"), 1)
+        XCTAssertEqual(mockViewController.observer.getCallCountFor("presentViewController"), 1)
+        let callRecord = mockViewController.observer.getCallRecordFor("presentViewController")
+        XCTAssertEqual(callRecord?[0] as? FloatingUIAlertController, subject)
+        XCTAssertEqual(callRecord?[1] as? Bool, true)
+        let closure = callRecord?[2] as? (()->Void)
+        closure?()
+        XCTAssertTrue(completed)
+    }
+
     func test_viewDidDisappear_HidesTheFloatingAlertWindow() {
         subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
         let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
@@ -81,7 +106,7 @@ class FloatingUIAlertControllerTests: XCTestCase {
         let observer = Observer()
 
         override func presentViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
-            observer.recordCallFor("presentViewController", params: [viewControllerToPresent, flag])
+            observer.recordCallFor("presentViewController", params: [viewControllerToPresent, flag, completion])
         }
     }
 

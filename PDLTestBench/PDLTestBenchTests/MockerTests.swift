@@ -117,6 +117,27 @@ class MockerTests: XCTestCase {
         XCTAssertEqual("far", entry5?.value as? String)
     }
 
+    func test_setReturnValueFor_acceptsClosures() {
+        var testValue = 0
+        let fooClosure = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.returnValuesDictionary = [:]
+
+        subject.setReturnValue(fooClosure, forName: "foo")
+
+        XCTAssertEqual(1, subject.returnValuesDictionary.count)
+        let segmentedSequenceList = subject.returnValuesDictionary["foo"]?.segmentedSequenceList
+        XCTAssertEqual(1, segmentedSequenceList?.sequenceList.count)
+        let entry1 = segmentedSequenceList?.sequenceList[0]
+        XCTAssertEqual(1, entry1?.index)
+        let closure = entry1?.value as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+    }
+
     func test_setReturnValueFor_acceptsNilValues() {
         subject.returnValuesDictionary = [:]
 
@@ -173,6 +194,30 @@ class MockerTests: XCTestCase {
         XCTAssertTrue(result2.success)
         XCTAssertEqual("boo", result2.value as? String)
         XCTAssertEqual(6, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
+    }
+
+    func test_getReturnValueFor_returnsSameValueForDictionaryEntryWithSequenceEntryContainingClosure() {
+        var testValue = 0
+        let fubarClosure = {(value: Int) -> Bool in
+            testValue = value
+            return true
+        }
+        subject.returnValuesDictionary = [
+            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+                segmentedSequenceList: SegmentedSequenceList(fromList: [
+                    (3, fubarClosure)
+                    ]),
+                pendingInvocation: 4)
+        ]
+
+        let result = subject.getReturnValueFor("xyzzy")
+
+        XCTAssertTrue(result.success)
+        let closure = result.value as? ((Int) -> Bool)
+        let answer = closure?(3) ?? false
+        XCTAssertTrue(answer)
+        XCTAssertEqual(testValue, 3)
+        XCTAssertEqual(5, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
     func test_getReturnValueFor_returnsValuesAtInvocationsForDictionaryEntryWithMultipleSequenceEntries() {

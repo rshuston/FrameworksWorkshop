@@ -12,13 +12,13 @@ public class Observer {
 
     // Dictionary of call names, containing arrays of parameter lists
     // for each invocation of a call name
-    var callHistoryDictionary: [ String : [ [AnyObject?] ] ]
+    var callHistoryDictionary: [ String : [ [Any?] ] ]
 
     public init() {
         callHistoryDictionary = [:]
     }
 
-    public func recordCallFor(name: String, params: [AnyObject?]) {
+    public func recordCallFor(name: String, params: [Any?]) {
         if callHistoryDictionary.keys.contains(name) {
             callHistoryDictionary[name]!.append(params)
         } else {
@@ -30,11 +30,11 @@ public class Observer {
         return callHistoryDictionary[name]?.count ?? 0
     }
 
-    public func getCallHistoryFor(name: String) -> [[AnyObject?]]? {
+    public func getCallHistoryFor(name: String) -> [[Any?]]? {
         return callHistoryDictionary[name]
     }
 
-    public func getCallRecordFor(name: String, forInvocation invocation: Int = 0) -> [AnyObject?]? {
+    public func getCallRecordFor(name: String, forInvocation invocation: Int = 0) -> [Any?]? {
         guard let callHistory = callHistoryDictionary[name]
             where invocation < callHistory.count
             else {
