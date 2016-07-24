@@ -48,6 +48,48 @@
                ReferencedContainer = "container:PDLUIToolBox/PDLUIToolBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
+               BuildableName = "FrameworksTestingShell.app"
+               BlueprintName = "FrameworksTestingShell"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4EED565F1D3BBB6300F06F9E"
+               BuildableName = "FrameworksTestingShellTests.xctest"
+               BlueprintName = "FrameworksTestingShellTests"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E5AE8F91D3C51D300919E08"
+               BuildableName = "FrameworksTestingShellUITests.xctest"
+               BlueprintName = "FrameworksTestingShellUITests"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -85,6 +127,26 @@
                BuildableName = "PDLUIToolBoxTests.xctest"
                BlueprintName = "PDLUIToolBoxTests"
                ReferencedContainer = "container:PDLUIToolBox/PDLUIToolBox.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4EED565F1D3BBB6300F06F9E"
+               BuildableName = "FrameworksTestingShellTests.xctest"
+               BlueprintName = "FrameworksTestingShellTests"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E5AE8F91D3C51D300919E08"
+               BuildableName = "FrameworksTestingShellUITests.xctest"
+               BlueprintName = "FrameworksTestingShellUITests"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
