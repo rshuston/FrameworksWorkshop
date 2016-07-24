@@ -56,6 +56,7 @@
 		4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellUITests.swift; sourceTree = "<group>"; };
 		4E5AE8FE1D3C51D300919E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA549C81D4439F20080AE65 /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../PDLToolBox/build/Debug-iphoneos/PDLToolBox.framework"; sourceTree = "<group>"; };
 		4EED564C1D3BBB6300F06F9E /* FrameworksTestingShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworksTestingShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EED56511D3BBB6300F06F9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		4E613BA21D4403AA00607F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EA549C81D4439F20080AE65 /* PDLToolBox.framework */,
 				4EED56851D3BBDDB00F06F9E /* PDLUIToolBox.framework */,
 			);
 			name = Frameworks;
