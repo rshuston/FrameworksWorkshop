@@ -28,48 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EED56281D3BBABE00F06F9E"
-               BuildableName = "PDLUIToolBox.framework"
-               BlueprintName = "PDLUIToolBox"
-               ReferencedContainer = "container:PDLUIToolBox/PDLUIToolBox.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E20C4BD1D0A4AB9007F7C2C"
-               BuildableName = "PDLTestBench.framework"
-               BlueprintName = "PDLTestBench"
-               ReferencedContainer = "container:PDLTestBench/PDLTestBench.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4ECE0CBC1D0A494D00AAD43A"
-               BuildableName = "PDLToolBox.framework"
-               BlueprintName = "PDLToolBox"
-               ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4EED565F1D3BBB6300F06F9E"
                BuildableName = "FrameworksTestingShellTests.xctest"
                BlueprintName = "FrameworksTestingShellTests"
