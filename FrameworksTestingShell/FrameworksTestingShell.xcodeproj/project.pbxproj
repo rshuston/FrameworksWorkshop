@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E21ADE71D3EEEC2003623EF /* UIViewController+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */; };
 		4E5AE8FD1D3C51D300919E08 /* FrameworksTestingShellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */; };
-		4E62B5601D4B08ED0029E311 /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62B55D1D4B08D20029E311 /* PDLUIToolBox.framework */; };
-		4E62B5611D4B08ED0029E311 /* PDLUIToolBox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62B55D1D4B08D20029E311 /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E957D9D1D4B7DC700178FEE /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */; };
+		4E957D9E1D4B7DC700178FEE /* PDLUIToolBox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4EED56501D3BBB6300F06F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */; };
 		4EED56521D3BBB6300F06F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56511D3BBB6300F06F9E /* ViewController.swift */; };
 		4EED56551D3BBB6300F06F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED56531D3BBB6300F06F9E /* Main.storyboard */; };
@@ -28,23 +28,23 @@
 			remoteGlobalIDString = 4EED564B1D3BBB6300F06F9E;
 			remoteInfo = FrameworksTestingShell;
 		};
-		4E62B55C1D4B08D20029E311 /* PBXContainerItemProxy */ = {
+		4E957D971D4B7D4600178FEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */;
+			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4EED56291D3BBABE00F06F9E;
 			remoteInfo = PDLUIToolBox;
 		};
-		4E62B55E1D4B08D20029E311 /* PBXContainerItemProxy */ = {
+		4E957D991D4B7D4600178FEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */;
+			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4EED56331D3BBABE00F06F9E;
 			remoteInfo = PDLUIToolBoxTests;
 		};
-		4E62B5621D4B08ED0029E311 /* PBXContainerItemProxy */ = {
+		4E957D9F1D4B7DC800178FEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */;
+			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 4EED56281D3BBABE00F06F9E;
 			remoteInfo = PDLUIToolBox;
@@ -65,7 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E62B5611D4B08ED0029E311 /* PDLUIToolBox.framework in Embed Frameworks */,
+				4E957D9E1D4B7DC700178FEE /* PDLUIToolBox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +77,7 @@
 		4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellUITests.swift; sourceTree = "<group>"; };
 		4E5AE8FE1D3C51D300919E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLUIToolBox.xcodeproj; path = ../PDLUIToolBox/PDLUIToolBox.xcodeproj; sourceTree = "<group>"; };
+		4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLUIToolBox.xcodeproj; path = ../PDLUIToolBox/PDLUIToolBox.xcodeproj; sourceTree = "<group>"; };
 		4EED564C1D3BBB6300F06F9E /* FrameworksTestingShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworksTestingShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EED56511D3BBB6300F06F9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E62B5601D4B08ED0029E311 /* PDLUIToolBox.framework in Frameworks */,
+				4E957D9D1D4B7DC700178FEE /* PDLUIToolBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,16 +129,16 @@
 		4E613BA21D4403AA00607F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */,
+				4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4E62B5581D4B08D20029E311 /* Products */ = {
+		4E957D931D4B7D4600178FEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E62B55D1D4B08D20029E311 /* PDLUIToolBox.framework */,
-				4E62B55F1D4B08D20029E311 /* PDLUIToolBoxTests.xctest */,
+				4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */,
+				4E957D9A1D4B7D4600178FEE /* PDLUIToolBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4E62B5631D4B08ED0029E311 /* PBXTargetDependency */,
+				4E957DA01D4B7DC800178FEE /* PBXTargetDependency */,
 			);
 			name = FrameworksTestingShell;
 			productName = FrameworksTestingShell;
@@ -282,8 +282,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 4E62B5581D4B08D20029E311 /* Products */;
-					ProjectRef = 4E62B5571D4B08D20029E311 /* PDLUIToolBox.xcodeproj */;
+					ProductGroup = 4E957D931D4B7D4600178FEE /* Products */;
+					ProjectRef = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -296,18 +296,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4E62B55D1D4B08D20029E311 /* PDLUIToolBox.framework */ = {
+		4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = PDLUIToolBox.framework;
-			remoteRef = 4E62B55C1D4B08D20029E311 /* PBXContainerItemProxy */;
+			remoteRef = 4E957D971D4B7D4600178FEE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4E62B55F1D4B08D20029E311 /* PDLUIToolBoxTests.xctest */ = {
+		4E957D9A1D4B7D4600178FEE /* PDLUIToolBoxTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = PDLUIToolBoxTests.xctest;
-			remoteRef = 4E62B55E1D4B08D20029E311 /* PBXContainerItemProxy */;
+			remoteRef = 4E957D991D4B7D4600178FEE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -375,10 +375,10 @@
 			target = 4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */;
 			targetProxy = 4E5AE8FF1D3C51D300919E08 /* PBXContainerItemProxy */;
 		};
-		4E62B5631D4B08ED0029E311 /* PBXTargetDependency */ = {
+		4E957DA01D4B7DC800178FEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PDLUIToolBox;
-			targetProxy = 4E62B5621D4B08ED0029E311 /* PBXContainerItemProxy */;
+			targetProxy = 4E957D9F1D4B7DC800178FEE /* PBXContainerItemProxy */;
 		};
 		4EED56621D3BBB6300F06F9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
