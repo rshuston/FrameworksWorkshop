@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4ECE0CC61D0A494D00AAD43A"
-               BuildableName = "PDLToolBoxTests.xctest"
-               BlueprintName = "PDLToolBoxTests"
-               ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
+               BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
+               BuildableName = "FrameworksTestingShell.app"
+               BlueprintName = "FrameworksTestingShell"
+               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,23 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E20C4C71D0A4AB9007F7C2C"
-               BuildableName = "PDLTestBenchTests.xctest"
-               BlueprintName = "PDLTestBenchTests"
-               ReferencedContainer = "container:PDLTestBench/PDLTestBench.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EED56321D3BBABE00F06F9E"
-               BuildableName = "PDLUIToolBoxTests.xctest"
-               BlueprintName = "PDLUIToolBoxTests"
+               BlueprintIdentifier = "4EED56281D3BBABE00F06F9E"
+               BuildableName = "PDLUIToolBox.framework"
+               BlueprintName = "PDLUIToolBox"
                ReferencedContainer = "container:PDLUIToolBox/PDLUIToolBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,10 +42,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
-               BuildableName = "FrameworksTestingShell.app"
-               BlueprintName = "FrameworksTestingShell"
-               ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+               BlueprintIdentifier = "4E20C4BD1D0A4AB9007F7C2C"
+               BuildableName = "PDLTestBench.framework"
+               BlueprintName = "PDLTestBench"
+               ReferencedContainer = "container:PDLTestBench/PDLTestBench.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4ECE0CBC1D0A494D00AAD43A"
+               BuildableName = "PDLToolBox.framework"
+               BlueprintName = "PDLToolBox"
+               ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -88,6 +88,48 @@
                BuildableName = "FrameworksTestingShellUITests.xctest"
                BlueprintName = "FrameworksTestingShellUITests"
                ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4EED56321D3BBABE00F06F9E"
+               BuildableName = "PDLUIToolBoxTests.xctest"
+               BlueprintName = "PDLUIToolBoxTests"
+               ReferencedContainer = "container:PDLUIToolBox/PDLUIToolBox.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E20C4C71D0A4AB9007F7C2C"
+               BuildableName = "PDLTestBenchTests.xctest"
+               BlueprintName = "PDLTestBenchTests"
+               ReferencedContainer = "container:PDLTestBench/PDLTestBench.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4ECE0CC61D0A494D00AAD43A"
+               BuildableName = "PDLToolBoxTests.xctest"
+               BlueprintName = "PDLToolBoxTests"
+               ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -153,10 +195,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4ECE0CC61D0A494D00AAD43A"
-            BuildableName = "PDLToolBoxTests.xctest"
-            BlueprintName = "PDLToolBoxTests"
-            ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
+            BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
+            BuildableName = "FrameworksTestingShell.app"
+            BlueprintName = "FrameworksTestingShell"
+            ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -175,10 +217,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4ECE0CC61D0A494D00AAD43A"
-            BuildableName = "PDLToolBoxTests.xctest"
-            BlueprintName = "PDLToolBoxTests"
-            ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
+            BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
+            BuildableName = "FrameworksTestingShell.app"
+            BlueprintName = "FrameworksTestingShell"
+            ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -193,10 +235,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4ECE0CC61D0A494D00AAD43A"
-            BuildableName = "PDLToolBoxTests.xctest"
-            BlueprintName = "PDLToolBoxTests"
-            ReferencedContainer = "container:PDLToolBox/PDLToolBox.xcodeproj">
+            BlueprintIdentifier = "4EED564B1D3BBB6300F06F9E"
+            BuildableName = "FrameworksTestingShell.app"
+            BlueprintName = "FrameworksTestingShell"
+            ReferencedContainer = "container:FrameworksTestingShell/FrameworksTestingShell.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

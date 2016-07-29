@@ -14,7 +14,7 @@
 		4E20C4DB1D0A4B5C007F7C2C /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D91D0A4B5C007F7C2C /* Observer.swift */; };
 		4E20C4DE1D0A4B69007F7C2C /* MockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DC1D0A4B69007F7C2C /* MockerTests.swift */; };
 		4E20C4DF1D0A4B69007F7C2C /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */; };
-		4E20C4E11D0A4C24007F7C2C /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */; };
+		4E62B53E1D4B08480029E311 /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E62B53B1D4B08040029E311 /* PDLToolBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +24,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4E20C4BD1D0A4AB9007F7C2C;
 			remoteInfo = PDLTestBench;
+		};
+		4E62B53A1D4B08040029E311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E62B5351D4B08030029E311 /* PDLToolBox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4ECE0CBD1D0A494D00AAD43A;
+			remoteInfo = PDLToolBox;
+		};
+		4E62B53C1D4B08040029E311 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E62B5351D4B08030029E311 /* PDLToolBox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4ECE0CC71D0A494D00AAD43A;
+			remoteInfo = PDLToolBoxTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,7 +52,7 @@
 		4E20C4D91D0A4B5C007F7C2C /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		4E20C4DC1D0A4B69007F7C2C /* MockerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockerTests.swift; sourceTree = "<group>"; };
 		4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
-		4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphonesimulator/PDLToolBox.framework"; sourceTree = "<group>"; };
+		4E62B5351D4B08030029E311 /* PDLToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLToolBox.xcodeproj; path = ../PDLToolBox/PDLToolBox.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E20C4E11D0A4C24007F7C2C /* PDLToolBox.framework in Frameworks */,
+				4E62B53E1D4B08480029E311 /* PDLToolBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,9 +119,18 @@
 		4E613B9D1D44019C00607F82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E20C4E01D0A4C24007F7C2C /* PDLToolBox.framework */,
+				4E62B5351D4B08030029E311 /* PDLToolBox.xcodeproj */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E62B5361D4B08030029E311 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E62B53B1D4B08040029E311 /* PDLToolBox.framework */,
+				4E62B53D1D4B08040029E311 /* PDLToolBoxTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +211,12 @@
 			mainGroup = 4E20C4B41D0A4AB9007F7C2C;
 			productRefGroup = 4E20C4BF1D0A4AB9007F7C2C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4E62B5361D4B08030029E311 /* Products */;
+					ProjectRef = 4E62B5351D4B08030029E311 /* PDLToolBox.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4E20C4BD1D0A4AB9007F7C2C /* PDLTestBench */,
@@ -195,6 +224,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4E62B53B1D4B08040029E311 /* PDLToolBox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PDLToolBox.framework;
+			remoteRef = 4E62B53A1D4B08040029E311 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E62B53D1D4B08040029E311 /* PDLToolBoxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PDLToolBoxTests.xctest;
+			remoteRef = 4E62B53C1D4B08040029E311 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E20C4BC1D0A4AB9007F7C2C /* Resources */ = {

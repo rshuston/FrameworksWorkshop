@@ -20,6 +20,34 @@
                ReferencedContainer = "container:FrameworksTestingShell.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4EED565F1D3BBB6300F06F9E"
+               BuildableName = "FrameworksTestingShellTests.xctest"
+               BlueprintName = "FrameworksTestingShellTests"
+               ReferencedContainer = "container:FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E5AE8F91D3C51D300919E08"
+               BuildableName = "FrameworksTestingShellUITests.xctest"
+               BlueprintName = "FrameworksTestingShellUITests"
+               ReferencedContainer = "container:FrameworksTestingShell.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
