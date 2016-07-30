@@ -15,7 +15,7 @@ public class SegmentedSequenceList {
     // for the given index range. A value can be any swift entity, and each
     // segment can have a different value type.
     //
-    // On application of the segmented sequence list is to mock out the return
+    // One application of the segmented sequence list is to mock out the return
     // values for a given sequence of calls to a function. For example, the
     // first 5 calls can be one value, the next 3 calls can be another value,
     // and so on. Queries beyond the lowest or the highest segments evaluate

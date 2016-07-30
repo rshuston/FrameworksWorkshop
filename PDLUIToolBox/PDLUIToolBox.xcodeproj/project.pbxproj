@@ -11,6 +11,8 @@
 		4E957D641D4B799900178FEE /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EED56291D3BBABE00F06F9E /* PDLUIToolBox.framework */; };
 		4E957D9C1D4B7DAA00178FEE /* PDLTestBench.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D861D4B7D2A00178FEE /* PDLTestBench.framework */; };
 		4EC98D1D1D3DDDFA0056409F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC98D1C1D3DDDFA0056409F /* UIViewController+Extension.swift */; };
+		4EE99BB21D4C6D0B001FE09F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE99BB11D4C6D0B001FE09F /* UIView+Extension.swift */; };
+		4EE99BB61D4C6D39001FE09F /* UIView+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE99BB51D4C6D39001FE09F /* UIView+ExtensionTests.swift */; };
 		4EED562D1D3BBABE00F06F9E /* PDLUIToolBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EED562C1D3BBABE00F06F9E /* PDLUIToolBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EED56391D3BBABE00F06F9E /* PDLUIToolBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56381D3BBABE00F06F9E /* PDLUIToolBoxTests.swift */; };
 		4EED567E1D3BBCE300F06F9E /* FloatingUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED567D1D3BBCE300F06F9E /* FloatingUIAlertController.swift */; };
@@ -45,6 +47,8 @@
 		4E4A8B691D3E570E00BC26D0 /* UIViewController+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionTests.swift"; sourceTree = "<group>"; };
 		4E957D801D4B7D2A00178FEE /* PDLTestBench.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLTestBench.xcodeproj; path = ../PDLTestBench/PDLTestBench.xcodeproj; sourceTree = "<group>"; };
 		4EC98D1C1D3DDDFA0056409F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4EE99BB11D4C6D0B001FE09F /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4EE99BB51D4C6D39001FE09F /* UIView+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ExtensionTests.swift"; sourceTree = "<group>"; };
 		4EED56291D3BBABE00F06F9E /* PDLUIToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDLUIToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED562C1D3BBABE00F06F9E /* PDLUIToolBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDLUIToolBox.h; sourceTree = "<group>"; };
 		4EED562E1D3BBABE00F06F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				4EED562E1D3BBABE00F06F9E /* Info.plist */,
 				4EED567D1D3BBCE300F06F9E /* FloatingUIAlertController.swift */,
 				4EC98D1C1D3DDDFA0056409F /* UIViewController+Extension.swift */,
+				4EE99BB11D4C6D0B001FE09F /* UIView+Extension.swift */,
 			);
 			path = PDLUIToolBox;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				4EED563A1D3BBABE00F06F9E /* Info.plist */,
 				4EED56891D3BBF0300F06F9E /* FloatingUIAlertControllerTests.swift */,
 				4E4A8B691D3E570E00BC26D0 /* UIViewController+ExtensionTests.swift */,
+				4EE99BB51D4C6D39001FE09F /* UIView+ExtensionTests.swift */,
 			);
 			path = PDLUIToolBoxTests;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE99BB21D4C6D0B001FE09F /* UIView+Extension.swift in Sources */,
 				4EC98D1D1D3DDDFA0056409F /* UIViewController+Extension.swift in Sources */,
 				4EED567E1D3BBCE300F06F9E /* FloatingUIAlertController.swift in Sources */,
 			);
@@ -275,6 +282,7 @@
 			files = (
 				4EED568A1D3BBF0300F06F9E /* FloatingUIAlertControllerTests.swift in Sources */,
 				4EED56391D3BBABE00F06F9E /* PDLUIToolBoxTests.swift in Sources */,
+				4EE99BB61D4C6D39001FE09F /* UIView+ExtensionTests.swift in Sources */,
 				4E4A8B6A1D3E570E00BC26D0 /* UIViewController+ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
