@@ -80,7 +80,7 @@
 			children = (
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
-				4E613B9D1D44019C00607F82 /* Frameworks */,
+				4E613B9D1D44019C00607F82 /* Auxiliary Projects */,
 				4E20C4BF1D0A4AB9007F7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,12 +116,12 @@
 			path = PDLTestBenchTests;
 			sourceTree = "<group>";
 		};
-		4E613B9D1D44019C00607F82 /* Frameworks */ = {
+		4E613B9D1D44019C00607F82 /* Auxiliary Projects */ = {
 			isa = PBXGroup;
 			children = (
 				4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */,
 			);
-			name = Frameworks;
+			name = "Auxiliary Projects";
 			sourceTree = "<group>";
 		};
 		4E957D661D4B79AA00178FEE /* Products */ = {
