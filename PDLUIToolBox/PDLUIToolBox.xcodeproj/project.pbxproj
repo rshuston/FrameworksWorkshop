@@ -79,12 +79,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E613BA11D44028A00607F82 /* Auxiliary Projects */ = {
+		4E613BA11D44028A00607F82 /* Requisite Projects */ = {
 			isa = PBXGroup;
 			children = (
 				4E957D801D4B7D2A00178FEE /* PDLTestBench.xcodeproj */,
 			);
-			name = "Auxiliary Projects";
+			name = "Requisite Projects";
 			sourceTree = "<group>";
 		};
 		4E957D811D4B7D2A00178FEE /* Products */ = {
@@ -101,7 +101,7 @@
 			children = (
 				4EED562B1D3BBABE00F06F9E /* PDLUIToolBox */,
 				4EED56371D3BBABE00F06F9E /* PDLUIToolBoxTests */,
-				4E613BA11D44028A00607F82 /* Auxiliary Projects */,
+				4E613BA11D44028A00607F82 /* Requisite Projects */,
 				4EED562A1D3BBABE00F06F9E /* Products */,
 			);
 			sourceTree = "<group>";

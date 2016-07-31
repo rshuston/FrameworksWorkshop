@@ -1,5 +1,5 @@
 //
-//  ObserverTests.swift
+//  FuncFuncRecorderTests.swift
 //  PDLTestBench
 //
 //  Created by Robert Huston on 6/4/16.
@@ -9,14 +9,14 @@
 import XCTest
 @testable import PDLTestBench
 
-class ObserverTests: XCTestCase {
+class FuncFuncRecorderTests: XCTestCase {
 
-    var subject: Observer!
+    var subject: FuncRecorder!
 
     override func setUp() {
         super.setUp()
 
-        subject = Observer()
+        subject = FuncRecorder()
     }
     
     override func tearDown() {
@@ -25,7 +25,7 @@ class ObserverTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_recordCallFor_recordsFirstCall() {
+    func test_recordCallFor_RecordsFirstCall() {
         subject.callHistoryDictionary = [:]
 
         subject.recordCallFor("foo", params: [1, "two"])
@@ -39,7 +39,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual("two", params?[1] as? String)
     }
 
-    func test_recordCallFor_recordsSubsequentCalls() {
+    func test_recordCallFor_RecordsSubsequentCalls() {
         subject.callHistoryDictionary = [:]
 
         subject.recordCallFor("foo", params: [1, "two"])
@@ -59,7 +59,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(5.0, params1?[2] as? Double)
     }
 
-    func test_recordCallFor_recordsClosureParameters() {
+    func test_recordCallFor_RecordsClosureParameters() {
         var testValue = 0
         let three = {(value: Int) -> Bool in
             testValue = value
@@ -86,7 +86,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_getCallCountFor_returnsCorrectNumberForFirstCall() {
+    func test_getCallCountFor_ReturnsCorrectNumberForFirstCall() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3]]]
 
         let count = subject.getCallCountFor("foo")
@@ -94,7 +94,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(1, count)
     }
 
-    func test_getCallCountFor_returnsCorrectNumberForSubsequentCalls() {
+    func test_getCallCountFor_ReturnsCorrectNumberForSubsequentCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let count = subject.getCallCountFor("foo")
@@ -102,7 +102,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(2, count)
     }
 
-    func test_getCallCountFor_returnsZeroForUnrecordedCalls() {
+    func test_getCallCountFor_ReturnsZeroForUnrecordedCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let count = subject.getCallCountFor("fubar")
@@ -110,7 +110,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(0, count)
     }
 
-    func test_getCallHistoryFor_returnsCallHistoryForRegisteredCalls() {
+    func test_getCallHistoryFor_ReturnsCallHistoryForRegisteredCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let callHistory = subject.getCallHistoryFor("foo")
@@ -128,7 +128,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(6, record1?[2] as? Int)
     }
 
-    func test_getCallHistoryFor_returnsNilForUnregisteredCalls() {
+    func test_getCallHistoryFor_ReturnsNilForUnregisteredCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let callHistory = subject.getCallHistoryFor("fubar")
@@ -136,7 +136,7 @@ class ObserverTests: XCTestCase {
         XCTAssertNil(callHistory)
     }
 
-    func test_getCallRecordFor_returnsCorrectRecordForRegisteredCalls() {
+    func test_getCallRecordFor_ReturnsCorrectRecordForRegisteredCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let record_0 = subject.getCallRecordFor("foo", forInvocation: 0)
@@ -154,7 +154,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(6, record_1?[2] as? Int)
     }
 
-    func test_getCallRecordFor_returnsDefaultRecordOfFirstCall() {
+    func test_getCallRecordFor_ReturnsDefaultRecordOfFirstCall() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let record_0 = subject.getCallRecordFor("foo")
@@ -165,7 +165,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(3, record_0?[2] as? Int)
     }
 
-    func test_getCallRecordFor_returnsCorrectRecordContainingClosure() {
+    func test_getCallRecordFor_ReturnsCorrectRecordContainingClosure() {
         var testValue = 0
         let three = {(value: Int) -> Bool in
             testValue = value
@@ -182,7 +182,7 @@ class ObserverTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_getCallRecordFor_returnsNilForInvalidInvocationNumber() {
+    func test_getCallRecordFor_ReturnsNilForInvalidInvocationNumber() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let record = subject.getCallRecordFor("foo", forInvocation: 2)
@@ -190,7 +190,7 @@ class ObserverTests: XCTestCase {
         XCTAssertNil(record)
     }
 
-    func test_getCallRecordFor_returnsNilForUnregisteredCalls() {
+    func test_getCallRecordFor_ReturnsNilForUnregisteredCalls() {
         subject.callHistoryDictionary = ["foo": [[1, 2, 3],[4, 5, 6]]]
 
         let record = subject.getCallRecordFor("fubar", forInvocation: 1)
@@ -198,7 +198,7 @@ class ObserverTests: XCTestCase {
         XCTAssertNil(record)
     }
 
-    func test_clearCallHistoryFor_clearsCallHistoryForRegisteredCalls() {
+    func test_clearCallHistoryFor_ClearsCallHistoryForRegisteredCalls() {
         subject.callHistoryDictionary = [
             "foo": [[1, 2, 3],[4, 5, 6]],
             "bar": [[1], [2], [3]]
@@ -211,7 +211,7 @@ class ObserverTests: XCTestCase {
         XCTAssertNotNil(subject.callHistoryDictionary["bar"])
     }
 
-    func test_clearCallHistoryFor_doesNotClearCallHistoryForUnregisteredCalls() {
+    func test_clearCallHistoryFor_DoesNotClearCallHistoryForUnregisteredCalls() {
         subject.callHistoryDictionary = [
             "foo": [[1, 2, 3],[4, 5, 6]],
             "bar": [[1], [2], [3]]
@@ -224,7 +224,7 @@ class ObserverTests: XCTestCase {
         XCTAssertNotNil(subject.callHistoryDictionary["bar"])
     }
 
-    func test_clearAllCallHistories_() {
+    func test_clearAllCallHistories_ClearsAllEntries() {
         subject.callHistoryDictionary = [
             "foo": [[1, 2, 3],[4, 5, 6]],
             "bar": [[1], [2], [3]]

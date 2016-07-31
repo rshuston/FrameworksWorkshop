@@ -1,5 +1,5 @@
 //
-//  Observer.swift
+//  FuncRecorder.swift
 //  PDLTestBench
 //
 //  Created by Robert Huston on 6/4/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Observer {
+public class FuncRecorder {
 
     // Dictionary of call names, containing arrays of parameter lists
     // for each invocation of a call name

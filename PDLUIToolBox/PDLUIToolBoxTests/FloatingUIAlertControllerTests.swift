@@ -50,9 +50,9 @@ class FloatingUIAlertControllerTests: XCTestCase {
 
         subject.show()
 
-        XCTAssertEqual(mockWindow.observer.getCallCountFor("makeKeyAndVisible"), 1)
-        XCTAssertEqual(mockViewController.observer.getCallCountFor("presentViewController"), 1)
-        let callRecord = mockViewController.observer.getCallRecordFor("presentViewController")
+        XCTAssertEqual(mockWindow.recorder.getCallCountFor("makeKeyAndVisible"), 1)
+        XCTAssertEqual(mockViewController.recorder.getCallCountFor("presentViewController"), 1)
+        let callRecord = mockViewController.recorder.getCallRecordFor("presentViewController")
         XCTAssertEqual(callRecord?[0] as? FloatingUIAlertController, subject)
     }
 
@@ -71,9 +71,9 @@ class FloatingUIAlertControllerTests: XCTestCase {
 
         subject.show(animated: true, completion: completionClosure)
 
-        XCTAssertEqual(mockWindow.observer.getCallCountFor("makeKeyAndVisible"), 1)
-        XCTAssertEqual(mockViewController.observer.getCallCountFor("presentViewController"), 1)
-        let callRecord = mockViewController.observer.getCallRecordFor("presentViewController")
+        XCTAssertEqual(mockWindow.recorder.getCallCountFor("makeKeyAndVisible"), 1)
+        XCTAssertEqual(mockViewController.recorder.getCallCountFor("presentViewController"), 1)
+        let callRecord = mockViewController.recorder.getCallRecordFor("presentViewController")
         XCTAssertEqual(callRecord?[0] as? FloatingUIAlertController, subject)
         XCTAssertEqual(callRecord?[1] as? Bool, true)
         let closure = callRecord?[2] as? (()->Void)
@@ -95,18 +95,18 @@ class FloatingUIAlertControllerTests: XCTestCase {
     }
 
     class MockUIWindow: UIWindow {
-        let observer = Observer()
+        let recorder = FuncRecorder()
 
         override func makeKeyAndVisible() {
-            observer.recordCallFor("makeKeyAndVisible", params: [])
+            recorder.recordCallFor("makeKeyAndVisible", params: [])
         }
     }
 
     class MockUIViewController: UIViewController {
-        let observer = Observer()
+        let recorder = FuncRecorder()
 
         override func presentViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
-            observer.recordCallFor("presentViewController", params: [viewControllerToPresent, flag, completion])
+            recorder.recordCallFor("presentViewController", params: [viewControllerToPresent, flag, completion])
         }
     }
 

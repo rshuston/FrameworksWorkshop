@@ -25,7 +25,7 @@ class QueueTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_init_fromList() {
+    func test_init_FromList() {
         let localSubject = Queue(fromList: [1, 2, 3])
 
         XCTAssertEqual(3, localSubject.queue.count)
@@ -34,7 +34,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(3, localSubject.queue[2] as? Int)
     }
 
-    func test_size() {
+    func test_size_ReturnsCorrectSize() {
         subject.queue = [1, 2, 3]
 
         let size = subject.size()
@@ -42,7 +42,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(3, size)
     }
 
-    func test_enqueue_operatesWithSimilarItems() {
+    func test_enqueue_OperatesWithSimilarItems() {
         subject.queue = [1, 2, 3]
 
         subject.enqueue(4)
@@ -51,7 +51,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(4, subject.queue[subject.queue.count - 1] as? Int)
     }
 
-    func test_enqueue_operatesWithDissimilarItems() {
+    func test_enqueue_OperatesWithDissimilarItems() {
         subject.queue = [1, "two", 3.0]
 
         subject.enqueue(true)
@@ -60,7 +60,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(true, subject.queue[subject.queue.count - 1] as? Bool)
     }
 
-    func test_enqueue_operatesWithClosureItems() {
+    func test_enqueue_OperatesWithClosureItems() {
         var testValue = 0
         let three = {(value: Int) -> Bool in
             testValue = value
@@ -77,7 +77,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_enqueue_operatesWithComplexItems() {
+    func test_enqueue_OperatesWithComplexItems() {
         subject.queue = [1, "two", 3.0]
 
         subject.enqueue((first: 1, second: 2, third: 3))
@@ -89,7 +89,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(3, lastItem?.third)
     }
 
-    func test_enqueue_operatesWithNilItems() {
+    func test_enqueue_OperatesWithNilItems() {
         subject.queue = [1, "two", 3.0]
 
         subject.enqueue(nil)
@@ -99,7 +99,7 @@ class QueueTests: XCTestCase {
         XCTAssertNil(element)
     }
 
-    func test_dequeue_operatesWithSimilarItems() {
+    func test_dequeue_OperatesWithSimilarItems() {
         subject.queue = [1, 2, 3, 4]
 
         let dequeued = subject.dequeue()
@@ -109,7 +109,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(1, dequeued.value as? Int)
     }
 
-    func test_dequeue_operatesWithDissimilarItems() {
+    func test_dequeue_OperatesWithDissimilarItems() {
         subject.queue = [1, "two", 3.0, true]
 
         let dequeued = subject.dequeue()
@@ -119,7 +119,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(1, dequeued.value as? Int)
     }
 
-    func test_dequeue_operatesWithClosureItems() {
+    func test_dequeue_OperatesWithClosureItems() {
         var testValue = 0
         let one = {(value: Int) -> Bool in
             testValue = value
@@ -137,7 +137,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(testValue, 1)
     }
 
-    func test_dequeue_operatesWithComplexItems() {
+    func test_dequeue_OperatesWithComplexItems() {
         subject.queue = [(first: 1, second: 2.0), 2, "three", 4.0]
 
         let dequeued = subject.dequeue()
@@ -149,7 +149,7 @@ class QueueTests: XCTestCase {
         XCTAssertEqual(2.0, dequeuedValue?.second)
     }
 
-    func test_dequeue_operatesWithNilItems() {
+    func test_dequeue_OperatesWithNilItems() {
         subject.queue = [nil, 2, "three", 4.0]
 
         let dequeued = subject.dequeue()
@@ -159,7 +159,7 @@ class QueueTests: XCTestCase {
         XCTAssertNil(dequeued.value)
     }
 
-    func test_dequeue_operatesWithEmptyStack() {
+    func test_dequeue_OperatesWithEmptyStack() {
         subject.queue = []
 
         let dequeued = subject.dequeue()
@@ -169,7 +169,7 @@ class QueueTests: XCTestCase {
         XCTAssertNil(dequeued.value)
     }
 
-    func test_clear() {
+    func test_clear_ClearsAllEntries() {
         subject.queue = [1, 2, 3]
 
         subject.clear()

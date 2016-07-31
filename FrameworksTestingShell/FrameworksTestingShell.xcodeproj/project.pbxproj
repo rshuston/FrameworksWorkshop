@@ -126,12 +126,12 @@
 			path = FrameworksTestingShellUITests;
 			sourceTree = "<group>";
 		};
-		4E613BA21D4403AA00607F82 /* Auxiliary Projects */ = {
+		4E613BA21D4403AA00607F82 /* Requisite Projects */ = {
 			isa = PBXGroup;
 			children = (
 				4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */,
 			);
-			name = "Auxiliary Projects";
+			name = "Requisite Projects";
 			sourceTree = "<group>";
 		};
 		4E957D931D4B7D4600178FEE /* Products */ = {
@@ -149,7 +149,7 @@
 				4EED564E1D3BBB6300F06F9E /* FrameworksTestingShell */,
 				4EED56631D3BBB6300F06F9E /* FrameworksTestingShellTests */,
 				4E5AE8FB1D3C51D300919E08 /* FrameworksTestingShellUITests */,
-				4E613BA21D4403AA00607F82 /* Auxiliary Projects */,
+				4E613BA21D4403AA00607F82 /* Requisite Projects */,
 				4EED564D1D3BBB6300F06F9E /* Products */,
 			);
 			sourceTree = "<group>";

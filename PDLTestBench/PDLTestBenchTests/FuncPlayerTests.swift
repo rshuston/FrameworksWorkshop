@@ -1,5 +1,5 @@
 //
-//  MockerTests.swift
+//  FuncFuncPlayerTests.swift
 //  PDLTestBench
 //
 //  Created by Robert Huston on 6/4/16.
@@ -7,17 +7,17 @@
 //
 
 import XCTest
-@testable import PDLToolBox
 @testable import PDLTestBench
+@testable import PDLToolBox // Needs to be testable to access SegmentedSequenceList elements
 
-class MockerTests: XCTestCase {
+class FuncFuncPlayerTests: XCTestCase {
 
-    var subject: Mocker!
+    var subject: FuncPlayer!
 
     override func setUp() {
         super.setUp()
 
-        subject = Mocker()
+        subject = FuncPlayer()
     }
     
     override func tearDown() {
@@ -26,7 +26,7 @@ class MockerTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_setReturnValue_populatesEmptyDictionaryWithNewValueAtDefaultInvocation() {
+    func test_setReturnValue_PopulatesEmptyDictionaryWithNewValueAtDefaultInvocation() {
         subject.returnValuesDictionary = [:]
 
         subject.setReturnValue("value", forName: "foo")
@@ -39,9 +39,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual("value", entry1?.value as? String)
     }
 
-    func test_setReturnValue_addsNewValueAtDefaultInvocationForNewNameToExistingDictionary() {
+    func test_setReturnValue_AddsNewValueAtDefaultInvocationForNewNameToExistingDictionary() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -58,9 +58,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual("heehaw", entry1?.value as? String)
     }
 
-    func test_setReturnValue_changesValueAtExistingDefaultInvocationForExistingNameOfExistingDictionary() {
+    func test_setReturnValue_ChangesValueAtExistingDefaultInvocationForExistingNameOfExistingDictionary() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -86,9 +86,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual("far", entry4?.value as? String)
     }
 
-    func test_setReturnValue_addsNewValueForNonExistingInvocationForExistingNameOfExistingDictionary() {
+    func test_setReturnValue_AddsNewValueForNonExistingInvocationForExistingNameOfExistingDictionary() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -117,7 +117,7 @@ class MockerTests: XCTestCase {
         XCTAssertEqual("far", entry5?.value as? String)
     }
 
-    func test_setReturnValueFor_acceptsClosures() {
+    func test_setReturnValueFor_AcceptsClosures() {
         var testValue = 0
         let fooClosure = {(value: Int) -> Bool in
             testValue = value
@@ -138,7 +138,7 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_setReturnValueFor_acceptsNilValues() {
+    func test_setReturnValueFor_AcceptsNilValues() {
         subject.returnValuesDictionary = [:]
 
         subject.setReturnValue(nil, forName: "foo")
@@ -151,7 +151,7 @@ class MockerTests: XCTestCase {
         XCTAssertNil(entry1?.value)
     }
 
-    func test_getReturnValueFor_failsForEmptyDictionary() {
+    func test_getReturnValueFor_FailsForEmptyDictionary() {
         subject.returnValuesDictionary = [:]
 
         let result = subject.getReturnValueFor("xyzzy")
@@ -160,9 +160,9 @@ class MockerTests: XCTestCase {
         XCTAssertNil(result.value)
     }
 
-    func test_getReturnValueFor_returnsSameValueForDictionaryEntryWithSingleSequenceEntry() {
+    func test_getReturnValueFor_ReturnsSameValueForDictionaryEntryWithSingleSequenceEntry() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (3, "fubar")
                     ]),
@@ -176,9 +176,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(5, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsValuesForDictionaryEntryWithMultipleSequenceEntries() {
+    func test_getReturnValueFor_ReturnsValuesForDictionaryEntryWithMultipleSequenceEntries() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -196,14 +196,14 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(6, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsSameValueForDictionaryEntryWithSequenceEntryContainingClosure() {
+    func test_getReturnValueFor_ReturnsSameValueForDictionaryEntryWithSequenceEntryContainingClosure() {
         var testValue = 0
         let fubarClosure = {(value: Int) -> Bool in
             testValue = value
             return true
         }
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (3, fubarClosure)
                     ]),
@@ -220,9 +220,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(5, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsValuesAtInvocationsForDictionaryEntryWithMultipleSequenceEntries() {
+    func test_getReturnValueFor_ReturnsValuesAtInvocationsForDictionaryEntryWithMultipleSequenceEntries() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -240,9 +240,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(8, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsSequencedValuesForDictionaryEntryWithMultipleSequenceEntries() {
+    func test_getReturnValueFor_ReturnsSequencedValuesForDictionaryEntryWithMultipleSequenceEntries() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -292,12 +292,12 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(9, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsSequencedValuesForMultipleDictionaryEntries() {
+    func test_getReturnValueFor_ReturnsSequencedValuesForMultipleDictionaryEntries() {
         subject.returnValuesDictionary = [
-            "hee" : PDLTestBench.Mocker.ValueSequencer(
+            "hee" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [(1, "foo"), (2, "bar")]),
                 pendingInvocation: 1),
-            "haw" : PDLTestBench.Mocker.ValueSequencer(
+            "haw" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [(3, "boo"), (4, "far")]),
                 pendingInvocation: 1)
         ]
@@ -334,7 +334,7 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(6, subject.returnValuesDictionary["haw"]?.pendingInvocation)
     }
 
-    func test_getReturnValueFor_returnsSequenceOfValuesAndNils() {
+    func test_getReturnValueFor_ReturnsSequenceOfValuesAndNils() {
         subject.setReturnValue(3.14145256, forName: "getRadius")
         subject.setReturnValue(nil, forName: "getRadius", forInvocation: 2)
 
@@ -358,9 +358,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(4, subject.returnValuesDictionary["getRadius"]?.pendingInvocation)
     }
 
-    func test_clearReturnValuesFor_clearsForRegisteredNames() {
+    func test_clearReturnValuesFor_ClearsForRegisteredNames() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -373,9 +373,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(1, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_clearReturnValuesFor_doesNotClearForUnregisteredNames() {
+    func test_clearReturnValuesFor_DoesNotClearForUnregisteredNames() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -384,12 +384,12 @@ class MockerTests: XCTestCase {
 
     }
 
-    func test_clearAllReturnValues() {
+    func test_clearAllReturnValues_ClearsAllEntries() {
         subject.returnValuesDictionary = [
-            "hee" : PDLTestBench.Mocker.ValueSequencer(
+            "hee" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [(1, "foo"), (2, "bar")]),
                 pendingInvocation: 1),
-            "haw" : PDLTestBench.Mocker.ValueSequencer(
+            "haw" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [(3, "boo"), (4, "far")]),
                 pendingInvocation: 1)
         ]
@@ -399,9 +399,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(0, subject.returnValuesDictionary.count)
     }
 
-    func test_resetSequencerFor_resetsForRegisteredNames() {
+    func test_resetSequencerFor_ResetsForRegisteredNames() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),
@@ -413,9 +413,9 @@ class MockerTests: XCTestCase {
         XCTAssertEqual(1, subject.returnValuesDictionary["xyzzy"]?.pendingInvocation)
     }
 
-    func test_resetSequencerFor_doesNotResetForUnregisteredNames() {
+    func test_resetSequencerFor_DoesNotResetForUnregisteredNames() {
         subject.returnValuesDictionary = [
-            "xyzzy" : PDLTestBench.Mocker.ValueSequencer(
+            "xyzzy" : PDLTestBench.FuncPlayer.ValueSequencer(
                 segmentedSequenceList: SegmentedSequenceList(fromList: [
                     (1, "foo"), (3, "bar"), (5, "boo"), (7, "far")
                     ]),

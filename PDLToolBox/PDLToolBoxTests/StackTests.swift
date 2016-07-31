@@ -25,7 +25,7 @@ class StackTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_init_fromList() {
+    func test_init_FromList() {
         let localSubject = Stack(fromList: [1, 2, 3])
 
         XCTAssertEqual(3, localSubject.stack.count)
@@ -34,7 +34,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(3, localSubject.stack[2] as? Int)
     }
 
-    func test_size() {
+    func test_size_ReturnsCorrectSize() {
         subject.stack = [1, 2, 3]
 
         let size = subject.size()
@@ -42,7 +42,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(3, size)
     }
 
-    func test_push_operatesWithSimilarItems() {
+    func test_push_OperatesWithSimilarItems() {
         subject.stack = [1, 2, 3]
 
         subject.push(4)
@@ -51,7 +51,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(4, subject.stack[subject.stack.count - 1] as? Int)
     }
 
-    func test_push_operatesWithDissimilarItems() {
+    func test_push_OperatesWithDissimilarItems() {
         subject.stack = [1, "two", 3.0]
 
         subject.push(true)
@@ -60,7 +60,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(true, subject.stack[subject.stack.count - 1] as? Bool)
     }
 
-    func test_push_operatesWithClosureItems() {
+    func test_push_OperatesWithClosureItems() {
         var testValue = 0
         let three = {(value: Int) -> Bool in
             testValue = value
@@ -77,7 +77,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_push_operatesWithComplexItems() {
+    func test_push_OperatesWithComplexItems() {
         subject.stack = [1, "two", 3.0]
 
         subject.push((first: 1, second: 2, third: 3))
@@ -89,7 +89,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(3, topItem?.third)
     }
 
-    func test_push_operatesWithNilItems() {
+    func test_push_OperatesWithNilItems() {
         subject.stack = [1, "two", 3.0]
 
         subject.push(nil)
@@ -99,7 +99,7 @@ class StackTests: XCTestCase {
         XCTAssertNil(element)
     }
 
-    func test_pop_operatesWithSimilarItems() {
+    func test_pop_OperatesWithSimilarItems() {
         subject.stack = [1, 2, 3, 4]
 
         let popped = subject.pop()
@@ -109,7 +109,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(4, popped.value as? Int)
     }
 
-    func test_pop_operatesWithDissimilarItems() {
+    func test_pop_OperatesWithDissimilarItems() {
         subject.stack = [1, "two", 3.0, true]
 
         let popped = subject.pop()
@@ -119,7 +119,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(true, popped.value as? Bool)
     }
 
-    func test_pop_operatesWithClosureItems() {
+    func test_pop_OperatesWithClosureItems() {
         var testValue = 0
         let three = {(value: Int) -> Bool in
             testValue = value
@@ -137,7 +137,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(testValue, 3)
     }
 
-    func test_pop_operatesWithComplexItems() {
+    func test_pop_OperatesWithComplexItems() {
         subject.stack = [1, "two", 3.0, (first: 1, second: 2.0)]
 
         let popped = subject.pop()
@@ -149,7 +149,7 @@ class StackTests: XCTestCase {
         XCTAssertEqual(2.0, poppedValue?.second)
     }
 
-    func test_pop_operatesWithNilItems() {
+    func test_pop_OperatesWithNilItems() {
         subject.stack = [1, "two", 3.0, nil]
 
         let popped = subject.pop()
@@ -159,7 +159,7 @@ class StackTests: XCTestCase {
         XCTAssertNil(popped.value)
     }
 
-    func test_pop_operatesWithEmptyStack() {
+    func test_pop_OperatesWithEmptyStack() {
         subject.stack = []
 
         let popped = subject.pop()
@@ -169,7 +169,7 @@ class StackTests: XCTestCase {
         XCTAssertNil(popped.value)
     }
 
-    func test_clear() {
+    func test_clear_ClearsAllEntries() {
         subject.stack = [1, 2, 3]
 
         subject.clear()

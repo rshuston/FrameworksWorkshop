@@ -1,5 +1,5 @@
 //
-//  Mocker.swift
+//  FuncPlayer.swift
 //  PDLTestBench
 //
 //  Created by Robert Huston on 6/4/16.
@@ -9,7 +9,7 @@
 import Foundation
 import PDLToolBox
 
-public class Mocker {
+public class FuncPlayer {
 
     class ValueSequencer {
         var segmentedSequenceList: SegmentedSequenceList

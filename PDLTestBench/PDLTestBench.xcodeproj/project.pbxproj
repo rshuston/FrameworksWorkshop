@@ -10,10 +10,10 @@
 		4E20C4C21D0A4AB9007F7C2C /* PDLTestBench.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E20C4C11D0A4AB9007F7C2C /* PDLTestBench.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E20C4C91D0A4AB9007F7C2C /* PDLTestBench.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E20C4BE1D0A4AB9007F7C2C /* PDLTestBench.framework */; };
 		4E20C4CE1D0A4AB9007F7C2C /* PDLTestBenchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4CD1D0A4AB9007F7C2C /* PDLTestBenchTests.swift */; };
-		4E20C4DA1D0A4B5C007F7C2C /* Mocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D81D0A4B5C007F7C2C /* Mocker.swift */; };
-		4E20C4DB1D0A4B5C007F7C2C /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D91D0A4B5C007F7C2C /* Observer.swift */; };
-		4E20C4DE1D0A4B69007F7C2C /* MockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DC1D0A4B69007F7C2C /* MockerTests.swift */; };
-		4E20C4DF1D0A4B69007F7C2C /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */; };
+		4E20C4DA1D0A4B5C007F7C2C /* FuncPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D81D0A4B5C007F7C2C /* FuncPlayer.swift */; };
+		4E20C4DB1D0A4B5C007F7C2C /* FuncRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */; };
+		4E20C4DE1D0A4B69007F7C2C /* FuncPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */; };
+		4E20C4DF1D0A4B69007F7C2C /* FuncRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */; };
 		4E957D9B1D4B7D7D00178FEE /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D6B1D4B79AA00178FEE /* PDLToolBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,10 +48,10 @@
 		4E20C4C81D0A4AB9007F7C2C /* PDLTestBenchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDLTestBenchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E20C4CD1D0A4AB9007F7C2C /* PDLTestBenchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDLTestBenchTests.swift; sourceTree = "<group>"; };
 		4E20C4CF1D0A4AB9007F7C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E20C4D81D0A4B5C007F7C2C /* Mocker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocker.swift; sourceTree = "<group>"; };
-		4E20C4D91D0A4B5C007F7C2C /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
-		4E20C4DC1D0A4B69007F7C2C /* MockerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockerTests.swift; sourceTree = "<group>"; };
-		4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
+		4E20C4D81D0A4B5C007F7C2C /* FuncPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncPlayer.swift; sourceTree = "<group>"; };
+		4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorder.swift; sourceTree = "<group>"; };
+		4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncPlayerTests.swift; sourceTree = "<group>"; };
+		4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorderTests.swift; sourceTree = "<group>"; };
 		4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLToolBox.xcodeproj; path = ../PDLToolBox/PDLToolBox.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 			children = (
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
-				4E613B9D1D44019C00607F82 /* Auxiliary Projects */,
+				4E613B9D1D44019C00607F82 /* Requisite Projects */,
 				4E20C4BF1D0A4AB9007F7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 			children = (
 				4E20C4C11D0A4AB9007F7C2C /* PDLTestBench.h */,
 				4E20C4C31D0A4AB9007F7C2C /* Info.plist */,
-				4E20C4D81D0A4B5C007F7C2C /* Mocker.swift */,
-				4E20C4D91D0A4B5C007F7C2C /* Observer.swift */,
+				4E20C4D81D0A4B5C007F7C2C /* FuncPlayer.swift */,
+				4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */,
 			);
 			path = PDLTestBench;
 			sourceTree = "<group>";
@@ -110,18 +110,18 @@
 			children = (
 				4E20C4CD1D0A4AB9007F7C2C /* PDLTestBenchTests.swift */,
 				4E20C4CF1D0A4AB9007F7C2C /* Info.plist */,
-				4E20C4DC1D0A4B69007F7C2C /* MockerTests.swift */,
-				4E20C4DD1D0A4B69007F7C2C /* ObserverTests.swift */,
+				4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */,
+				4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */,
 			);
 			path = PDLTestBenchTests;
 			sourceTree = "<group>";
 		};
-		4E613B9D1D44019C00607F82 /* Auxiliary Projects */ = {
+		4E613B9D1D44019C00607F82 /* Requisite Projects */ = {
 			isa = PBXGroup;
 			children = (
 				4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */,
 			);
-			name = "Auxiliary Projects";
+			name = "Requisite Projects";
 			sourceTree = "<group>";
 		};
 		4E957D661D4B79AA00178FEE /* Products */ = {
@@ -264,8 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E20C4DA1D0A4B5C007F7C2C /* Mocker.swift in Sources */,
-				4E20C4DB1D0A4B5C007F7C2C /* Observer.swift in Sources */,
+				4E20C4DA1D0A4B5C007F7C2C /* FuncPlayer.swift in Sources */,
+				4E20C4DB1D0A4B5C007F7C2C /* FuncRecorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E20C4DE1D0A4B69007F7C2C /* MockerTests.swift in Sources */,
+				4E20C4DE1D0A4B69007F7C2C /* FuncPlayerTests.swift in Sources */,
 				4E20C4CE1D0A4AB9007F7C2C /* PDLTestBenchTests.swift in Sources */,
-				4E20C4DF1D0A4B69007F7C2C /* ObserverTests.swift in Sources */,
+				4E20C4DF1D0A4B69007F7C2C /* FuncRecorderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
