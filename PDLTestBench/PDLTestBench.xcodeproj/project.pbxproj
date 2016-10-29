@@ -14,7 +14,8 @@
 		4E20C4DB1D0A4B5C007F7C2C /* FuncRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */; };
 		4E20C4DE1D0A4B69007F7C2C /* FuncPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */; };
 		4E20C4DF1D0A4B69007F7C2C /* FuncRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */; };
-		4E957D9B1D4B7D7D00178FEE /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D6B1D4B79AA00178FEE /* PDLToolBox.framework */; };
+		4EC6B8F71DC5357400344C93 /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC6B8F61DC5357400344C93 /* PDLToolBox.framework */; };
+		4EC6B8F81DC5358F00344C93 /* PDLToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC6B8F61DC5357400344C93 /* PDLToolBox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,20 +25,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4E20C4BD1D0A4AB9007F7C2C;
 			remoteInfo = PDLTestBench;
-		};
-		4E957D6A1D4B79AA00178FEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4ECE0CBD1D0A494D00AAD43A;
-			remoteInfo = PDLToolBox;
-		};
-		4E957D6C1D4B79AA00178FEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4ECE0CC71D0A494D00AAD43A;
-			remoteInfo = PDLToolBoxTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -52,7 +39,7 @@
 		4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorder.swift; sourceTree = "<group>"; };
 		4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncPlayerTests.swift; sourceTree = "<group>"; };
 		4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorderTests.swift; sourceTree = "<group>"; };
-		4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLToolBox.xcodeproj; path = ../PDLToolBox/PDLToolBox.xcodeproj; sourceTree = "<group>"; };
+		4EC6B8F61DC5357400344C93 /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphoneos/PDLToolBox.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E957D9B1D4B7D7D00178FEE /* PDLToolBox.framework in Frameworks */,
+				4EC6B8F71DC5357400344C93 /* PDLToolBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E20C4C91D0A4AB9007F7C2C /* PDLTestBench.framework in Frameworks */,
+				4EC6B8F81DC5358F00344C93 /* PDLToolBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +68,7 @@
 			children = (
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
-				4E613B9D1D44019C00607F82 /* Requisite Projects */,
+				4EC6B8F51DC5357400344C93 /* Frameworks */,
 				4E20C4BF1D0A4AB9007F7C2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,21 +104,12 @@
 			path = PDLTestBenchTests;
 			sourceTree = "<group>";
 		};
-		4E613B9D1D44019C00607F82 /* Requisite Projects */ = {
+		4EC6B8F51DC5357400344C93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */,
+				4EC6B8F61DC5357400344C93 /* PDLToolBox.framework */,
 			);
-			name = "Requisite Projects";
-			sourceTree = "<group>";
-		};
-		4E957D661D4B79AA00178FEE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4E957D6B1D4B79AA00178FEE /* PDLToolBox.framework */,
-				4E957D6D1D4B79AA00178FEE /* PDLToolBoxTests.xctest */,
-			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,14 +169,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Pinpoint Dynamics";
 				TargetAttributes = {
 					4E20C4BD1D0A4AB9007F7C2C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7WAY8D5BF4;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					4E20C4C71D0A4AB9007F7C2C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7WAY8D5BF4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -211,12 +195,6 @@
 			mainGroup = 4E20C4B41D0A4AB9007F7C2C;
 			productRefGroup = 4E20C4BF1D0A4AB9007F7C2C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4E957D661D4B79AA00178FEE /* Products */;
-					ProjectRef = 4E957D651D4B79AA00178FEE /* PDLToolBox.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4E20C4BD1D0A4AB9007F7C2C /* PDLTestBench */,
@@ -224,23 +202,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4E957D6B1D4B79AA00178FEE /* PDLToolBox.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PDLToolBox.framework;
-			remoteRef = 4E957D6A1D4B79AA00178FEE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4E957D6D1D4B79AA00178FEE /* PDLToolBoxTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PDLToolBoxTests.xctest;
-			remoteRef = 4E957D6C1D4B79AA00178FEE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E20C4BC1D0A4AB9007F7C2C /* Resources */ = {
@@ -304,8 +265,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -353,8 +316,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -374,6 +339,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -385,7 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -396,6 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -403,7 +372,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -413,26 +384,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.PDLTestBench;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		4E20C4D61D0A4AB9007F7C2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				INFOPLIST_FILE = PDLTestBenchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.PDLTestBenchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4E20C4D71D0A4AB9007F7C2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				INFOPLIST_FILE = PDLTestBenchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.PDLTestBenchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

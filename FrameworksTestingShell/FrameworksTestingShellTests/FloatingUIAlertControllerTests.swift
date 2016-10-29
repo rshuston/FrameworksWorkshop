@@ -25,31 +25,31 @@ import XCTest
 class FloatingUIAlertControllerTests: XCTestCase {
 
     func test_presentStandardAlert_AddsNewWindowToWindowHierarcy() {
-        let countBefore = UIApplication.sharedApplication().windows.count
+        let countBefore = UIApplication.shared.windows.count
         FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "Hi, there!")
-        let countAfter = UIApplication.sharedApplication().windows.count
+        let countAfter = UIApplication.shared.windows.count
         XCTAssert(countAfter > countBefore)
     }
 
     func test_presentStandardAlert_NewWindowContainsPresentedFloatingUIAlertController() {
-        let countBefore = UIApplication.sharedApplication().windows.count
+        let countBefore = UIApplication.shared.windows.count
         FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "Hi, there!")
-        let countAfter = UIApplication.sharedApplication().windows.count
+        let countAfter = UIApplication.shared.windows.count
 
         if countAfter > countBefore {
-            let frontWindow = UIApplication.sharedApplication().windows.last
+            let frontWindow = UIApplication.shared.windows.last
             let presentedViewController = frontWindow?.rootViewController?.presentedViewController
             XCTAssert(presentedViewController is FloatingUIAlertController)
         }
     }
 
     func test_presentStandardAlert_PresentedFloatingUIAlertControllerContainsReferenceToWindow() {
-        let countBefore = UIApplication.sharedApplication().windows.count
+        let countBefore = UIApplication.shared.windows.count
         FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "Hi, there!")
-        let countAfter = UIApplication.sharedApplication().windows.count
+        let countAfter = UIApplication.shared.windows.count
 
         if countAfter > countBefore {
-            let frontWindow = UIApplication.sharedApplication().windows.last
+            let frontWindow = UIApplication.shared.windows.last
             let presentedViewController = frontWindow?.rootViewController?.presentedViewController
             if presentedViewController is FloatingUIAlertController {
                 let floatingAlertController = presentedViewController as! FloatingUIAlertController
@@ -59,12 +59,12 @@ class FloatingUIAlertControllerTests: XCTestCase {
     }
 
     func test_presentStandardAlert_PresentedFloatingUIAlertControllerIsProperlyFormed() {
-        let countBefore = UIApplication.sharedApplication().windows.count
+        let countBefore = UIApplication.shared.windows.count
         FloatingUIAlertController.presentStandardAlert(title: "Alert", message: "Hi, there!")
-        let countAfter = UIApplication.sharedApplication().windows.count
+        let countAfter = UIApplication.shared.windows.count
 
         if countAfter > countBefore {
-            let frontWindow = UIApplication.sharedApplication().windows.last
+            let frontWindow = UIApplication.shared.windows.last
             let presentedViewController = frontWindow?.rootViewController?.presentedViewController
             if presentedViewController is FloatingUIAlertController {
                 let floatingAlertController = presentedViewController as! FloatingUIAlertController

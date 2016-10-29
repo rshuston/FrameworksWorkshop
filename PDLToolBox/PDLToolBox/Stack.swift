@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Stack {
+open class Stack {
 
     // A stack is a LIFO buffer implemented as an array of "Any?" items. Push
     // operations add to the end of the array. Pop operations remove from the
@@ -24,15 +24,15 @@ public class Stack {
         stack = fromList
     }
 
-    public func size() -> Int {
+    open func size() -> Int {
         return stack.count
     }
 
-    public func push(value: Any?) {
+    open func push(_ value: Any?) {
         stack.append(value)
     }
 
-    public func pop() -> (value: Any?, success: Bool) {
+    open func pop() -> (value: Any?, success: Bool) {
         var value: Any? = nil
         var success = false
         if stack.count > 0 {
@@ -42,7 +42,7 @@ public class Stack {
         return (value: value, success: success)
     }
 
-    public func clear() {
+    open func clear() {
         stack.removeAll()
     }
     

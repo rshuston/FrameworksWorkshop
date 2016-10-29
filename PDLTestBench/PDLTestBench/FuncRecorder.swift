@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class FuncRecorder {
+open class FuncRecorder {
 
     // Dictionary of call names, containing arrays of parameter lists
     // for each invocation of a call name
@@ -18,7 +18,7 @@ public class FuncRecorder {
         callHistoryDictionary = [:]
     }
 
-    public func recordCallFor(name: String, params: [Any?]) {
+    open func recordCallFor(_ name: String, params: [Any?]) {
         if callHistoryDictionary.keys.contains(name) {
             callHistoryDictionary[name]!.append(params)
         } else {
@@ -26,30 +26,30 @@ public class FuncRecorder {
         }
     }
 
-    public func getCallCountFor(name: String) -> Int {
+    open func getCallCountFor(_ name: String) -> Int {
         return callHistoryDictionary[name]?.count ?? 0
     }
 
-    public func getCallHistoryFor(name: String) -> [[Any?]]? {
+    open func getCallHistoryFor(_ name: String) -> [[Any?]]? {
         return callHistoryDictionary[name]
     }
 
-    public func getCallRecordFor(name: String, forInvocation invocation: Int = 0) -> [Any?]? {
+    open func getCallRecordFor(_ name: String, forInvocation invocation: Int = 0) -> [Any?]? {
         guard let callHistory = callHistoryDictionary[name]
-            where invocation < callHistory.count
+            , invocation < callHistory.count
             else {
                 return nil
         }
         return callHistory[invocation]
     }
 
-    public func clearCallHistoryFor(name: String) {
+    open func clearCallHistoryFor(_ name: String) {
         if callHistoryDictionary.keys.contains(name) {
-            callHistoryDictionary.removeValueForKey(name)
+            callHistoryDictionary.removeValue(forKey: name)
         }
     }
 
-    public func clearAllCallHistories() {
+    open func clearAllCallHistories() {
         callHistoryDictionary.removeAll()
     }
 

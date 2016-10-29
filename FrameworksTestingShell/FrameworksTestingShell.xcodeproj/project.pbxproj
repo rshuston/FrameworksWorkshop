@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E21ADE71D3EEEC2003623EF /* UIViewController+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21ADE61D3EEEC2003623EF /* UIViewController+ExtensionTests.swift */; };
 		4E5AE8FD1D3C51D300919E08 /* FrameworksTestingShellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */; };
-		4E957D9D1D4B7DC700178FEE /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */; };
-		4E957D9E1D4B7DC700178FEE /* PDLUIToolBox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4EC6B8FE1DC5361B00344C93 /* PDLUIToolBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC6B8FD1DC5361B00344C93 /* PDLUIToolBox.framework */; };
+		4EC6B8FF1DC5361B00344C93 /* PDLUIToolBox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC6B8FD1DC5361B00344C93 /* PDLUIToolBox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4EED56501D3BBB6300F06F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */; };
 		4EED56521D3BBB6300F06F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EED56511D3BBB6300F06F9E /* ViewController.swift */; };
 		4EED56551D3BBB6300F06F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EED56531D3BBB6300F06F9E /* Main.storyboard */; };
@@ -28,27 +28,6 @@
 			remoteGlobalIDString = 4EED564B1D3BBB6300F06F9E;
 			remoteInfo = FrameworksTestingShell;
 		};
-		4E957D971D4B7D4600178FEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EED56291D3BBABE00F06F9E;
-			remoteInfo = PDLUIToolBox;
-		};
-		4E957D991D4B7D4600178FEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4EED56331D3BBABE00F06F9E;
-			remoteInfo = PDLUIToolBoxTests;
-		};
-		4E957D9F1D4B7DC800178FEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EED56281D3BBABE00F06F9E;
-			remoteInfo = PDLUIToolBox;
-		};
 		4EED56611D3BBB6300F06F9E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EED56441D3BBB6300F06F9E /* Project object */;
@@ -65,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E957D9E1D4B7DC700178FEE /* PDLUIToolBox.framework in Embed Frameworks */,
+				4EC6B8FF1DC5361B00344C93 /* PDLUIToolBox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +56,7 @@
 		4E5AE8FA1D3C51D300919E08 /* FrameworksTestingShellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworksTestingShellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5AE8FC1D3C51D300919E08 /* FrameworksTestingShellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksTestingShellUITests.swift; sourceTree = "<group>"; };
 		4E5AE8FE1D3C51D300919E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PDLUIToolBox.xcodeproj; path = ../PDLUIToolBox/PDLUIToolBox.xcodeproj; sourceTree = "<group>"; };
+		4EC6B8FD1DC5361B00344C93 /* PDLUIToolBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PDLUIToolBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED564C1D3BBB6300F06F9E /* FrameworksTestingShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworksTestingShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EED564F1D3BBB6300F06F9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EED56511D3BBB6300F06F9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E957D9D1D4B7DC700178FEE /* PDLUIToolBox.framework in Frameworks */,
+				4EC6B8FE1DC5361B00344C93 /* PDLUIToolBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,21 +105,12 @@
 			path = FrameworksTestingShellUITests;
 			sourceTree = "<group>";
 		};
-		4E613BA21D4403AA00607F82 /* Requisite Projects */ = {
+		4EC6B9001DC5365800344C93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */,
+				4EC6B8FD1DC5361B00344C93 /* PDLUIToolBox.framework */,
 			);
-			name = "Requisite Projects";
-			sourceTree = "<group>";
-		};
-		4E957D931D4B7D4600178FEE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */,
-				4E957D9A1D4B7D4600178FEE /* PDLUIToolBoxTests.xctest */,
-			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		4EED56431D3BBB6300F06F9E = {
@@ -149,7 +119,7 @@
 				4EED564E1D3BBB6300F06F9E /* FrameworksTestingShell */,
 				4EED56631D3BBB6300F06F9E /* FrameworksTestingShellTests */,
 				4E5AE8FB1D3C51D300919E08 /* FrameworksTestingShellUITests */,
-				4E613BA21D4403AA00607F82 /* Requisite Projects */,
+				4EC6B9001DC5365800344C93 /* Frameworks */,
 				4EED564D1D3BBB6300F06F9E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -221,7 +191,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4E957DA01D4B7DC800178FEE /* PBXTargetDependency */,
 			);
 			name = FrameworksTestingShell;
 			productName = FrameworksTestingShell;
@@ -253,18 +222,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pinpoint Dynamics";
 				TargetAttributes = {
 					4E5AE8F91D3C51D300919E08 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4EED564B1D3BBB6300F06F9E;
 					};
 					4EED564B1D3BBB6300F06F9E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7WAY8D5BF4;
+						LastSwiftMigration = 0800;
 					};
 					4EED565F1D3BBB6300F06F9E = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4EED564B1D3BBB6300F06F9E;
 					};
 				};
@@ -280,12 +253,6 @@
 			mainGroup = 4EED56431D3BBB6300F06F9E;
 			productRefGroup = 4EED564D1D3BBB6300F06F9E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4E957D931D4B7D4600178FEE /* Products */;
-					ProjectRef = 4E957D921D4B7D4600178FEE /* PDLUIToolBox.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */,
@@ -294,23 +261,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4E957D981D4B7D4600178FEE /* PDLUIToolBox.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PDLUIToolBox.framework;
-			remoteRef = 4E957D971D4B7D4600178FEE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4E957D9A1D4B7D4600178FEE /* PDLUIToolBoxTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PDLUIToolBoxTests.xctest;
-			remoteRef = 4E957D991D4B7D4600178FEE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E5AE8F81D3C51D300919E08 /* Resources */ = {
@@ -375,11 +325,6 @@
 			target = 4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */;
 			targetProxy = 4E5AE8FF1D3C51D300919E08 /* PBXContainerItemProxy */;
 		};
-		4E957DA01D4B7DC800178FEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PDLUIToolBox;
-			targetProxy = 4E957D9F1D4B7DC800178FEE /* PBXContainerItemProxy */;
-		};
 		4EED56621D3BBB6300F06F9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4EED564B1D3BBB6300F06F9E /* FrameworksTestingShell */;
@@ -414,6 +359,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FrameworksTestingShell;
 			};
 			name = Debug;
@@ -425,6 +371,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FrameworksTestingShell;
 			};
 			name = Release;
@@ -443,8 +390,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -489,8 +438,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -509,6 +460,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -517,24 +469,28 @@
 		4EED56751D3BBB6300F06F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				INFOPLIST_FILE = FrameworksTestingShell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		4EED56761D3BBB6300F06F9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 7WAY8D5BF4;
 				INFOPLIST_FILE = FrameworksTestingShell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -546,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrameworksTestingShell.app/FrameworksTestingShell";
 			};
 			name = Debug;
@@ -558,6 +515,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pinpointdynamics.FrameworksTestingShellTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrameworksTestingShell.app/FrameworksTestingShell";
 			};
 			name = Release;

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         label.text = "Foo"
     }
 
-    @IBAction func buttonWasTouchedUpInside(sender: UIButton) {
+    @IBAction func buttonWasTouchedUpInside(_ sender: UIButton) {
         switch sender.currentTitle {
         case "Show Normal Alert"?:
             showNormalAlert()
@@ -30,12 +30,12 @@ class ViewController: UIViewController {
     }
 
     func showNormalAlert() {
-        let alertController = UIAlertController(title: "Normal Alert", message: "You've now been alerted.", preferredStyle: UIAlertControllerStyle.Alert)
-        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (UIAlertAction) -> Void in
+        let alertController = UIAlertController(title: "Normal Alert", message: "You've now been alerted.", preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (UIAlertAction) -> Void in
             self.label.text = "Foo"
         })
         alertController.addAction(alertAction)
-        presentViewController(alertController, animated: true, completion: { (Void) -> Void in
+        present(alertController, animated: true, completion: { (Void) -> Void in
             self.label.text = "Bar"
         })
     }

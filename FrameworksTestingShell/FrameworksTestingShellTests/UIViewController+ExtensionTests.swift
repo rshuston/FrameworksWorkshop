@@ -38,7 +38,7 @@ class UIViewController_ExtensionTests: XCTestCase {
     }
 
     func test_frontViewController_HandlesEmptyViewControllerHierarchy() {
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -48,7 +48,7 @@ class UIViewController_ExtensionTests: XCTestCase {
     func test_frontViewController_FindsRootViewController() {
         let rootViewController = UIViewController()
         appWindow.rootViewController = rootViewController
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -58,7 +58,7 @@ class UIViewController_ExtensionTests: XCTestCase {
     func test_frontViewController_FindsRootViewControllerOfSubclass() {
         let rootViewController = TestUIViewController()
         appWindow.rootViewController = rootViewController
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -71,10 +71,10 @@ class UIViewController_ExtensionTests: XCTestCase {
         rootViewController.view = rootView
         appWindow.rootViewController = rootViewController
         appWindow.addSubview(rootView)
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let presentedController = TestUIViewController()
-        rootViewController.presentViewController(presentedController, animated: false, completion: nil)
+        rootViewController.present(presentedController, animated: false, completion: nil)
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -88,7 +88,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         appWindow.rootViewController = splitViewController
         splitViewController.viewControllers = [masterViewController, detailViewController]
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -102,7 +102,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         appWindow.rootViewController = splitViewController
         splitViewController.viewControllers = [masterViewController, detailViewController]
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -115,7 +115,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         let pushedViewController = UIViewController()
         navigationViewController.pushViewController(pushedViewController, animated: false)
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -128,7 +128,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         let pushedViewController = TestUIViewController()
         navigationViewController.pushViewController(pushedViewController, animated: false)
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -143,7 +143,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         tabBarViewController.viewControllers = [firstViewController, secondViewController]
         tabBarViewController.selectedIndex = 1
         
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -158,7 +158,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         tabBarViewController.viewControllers = [firstViewController, secondViewController]
         tabBarViewController.selectedIndex = 1
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 
@@ -176,7 +176,7 @@ class UIViewController_ExtensionTests: XCTestCase {
         let pushedViewController = TestUIViewController()
         navigationViewController.pushViewController(pushedViewController, animated: false)
 
-        appWindow.makeKeyWindow()
+        appWindow.makeKey()
 
         let frontViewController = UIViewController.frontViewController()
 

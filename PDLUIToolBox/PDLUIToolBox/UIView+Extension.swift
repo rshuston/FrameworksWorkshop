@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
 
-    public func traverseViewHierarchy(found: (UIView) -> Void) {
+    public func traverseViewHierarchy(_ found: (UIView) -> Void) {
         found(self)
         self.subviews.forEach { (v: UIView) in
             v.traverseViewHierarchy(found)

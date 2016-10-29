@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SegmentedSequenceList {
+open class SegmentedSequenceList {
 
     // A segmented sequence list is an array of sequence segments which span
     // an ordered index series. The idea is that each segment applies a value
@@ -55,11 +55,11 @@ public class SegmentedSequenceList {
         sequenceList = fromList
     }
 
-    public func clear() {
+    open func clear() {
         sequenceList.removeAll()
     }
 
-    public func setValue(value: Any?, forIndex index: Int) {
+    open func setValue(_ value: Any?, forIndex index: Int) {
         var alreadyExists = false
         for i in 0..<sequenceList.count {
             if sequenceList[i].index == index {
@@ -70,13 +70,13 @@ public class SegmentedSequenceList {
         }
         if !alreadyExists {
             sequenceList.append((index, value))
-            sequenceList.sortInPlace({ (entry1: (index: Int, value: Any?), entry2: (index: Int, value: Any?)) -> Bool in
+            sequenceList.sort(by: { (entry1: (index: Int, value: Any?), entry2: (index: Int, value: Any?)) -> Bool in
                 return entry1.index <= entry2.index
             })
         }
     }
 
-    public func getValueFor(index: Int) -> (value: Any?, success: Bool) {
+    open func getValueFor(_ index: Int) -> (value: Any?, success: Bool) {
         var result: (value: Any?, success: Bool) = (nil, false)
         if sequenceList.count > 0 {
             if sequenceList.count == 1 {

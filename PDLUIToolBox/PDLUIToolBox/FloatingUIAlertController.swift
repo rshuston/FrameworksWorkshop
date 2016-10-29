@@ -8,38 +8,38 @@
 
 import UIKit
 
-public class FloatingUIAlertController: UIAlertController {
+open class FloatingUIAlertController: UIAlertController {
 
     lazy var alertWindow: UIWindow = {
         let blankViewController = BlankViewController()
-        blankViewController.view.backgroundColor = UIColor.clearColor()
+        blankViewController.view.backgroundColor = UIColor.clear
 
-        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = blankViewController
-        window.backgroundColor = UIColor.clearColor()
+        window.backgroundColor = UIColor.clear
         window.windowLevel = UIWindowLevelAlert
 
         return window
     }()
 
 
-    override public func viewDidDisappear(animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        alertWindow.hidden = true
+        alertWindow.isHidden = true
     }
 
 
-    public func show(animated animated: Bool = false, completion: (() -> Void)? = nil) {
+    open func show(animated: Bool = false, completion: (() -> Void)? = nil) {
         if let rootViewController = alertWindow.rootViewController {
             alertWindow.makeKeyAndVisible()
-            rootViewController.presentViewController(self, animated: animated, completion: completion)
+            rootViewController.present(self, animated: animated, completion: completion)
         }
     }
 
 
-    class public func presentStandardAlert(title title: String, message: String, action: ((UIAlertAction) -> Void)? = nil, completion: (() -> Void)? = nil) {
-        let alertController = FloatingUIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: action)
+    class open func presentStandardAlert(title: String, message: String, action: ((UIAlertAction) -> Void)? = nil, completion: (() -> Void)? = nil) {
+        let alertController = FloatingUIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: action)
         alertController.addAction(alertAction)
 
         alertController.show(animated: true, completion: completion)
@@ -47,14 +47,14 @@ public class FloatingUIAlertController: UIAlertController {
 
 
     // For view controller-based status bar style, make sure we use the same style for ours
-    private class BlankViewController: UIViewController {
+    fileprivate class BlankViewController: UIViewController {
 
-        private override func prefersStatusBarHidden() -> Bool {
-            return UIApplication.sharedApplication().statusBarHidden
+        fileprivate override var prefersStatusBarHidden : Bool {
+            return UIApplication.shared.isStatusBarHidden
         }
 
-        private override func preferredStatusBarStyle() -> UIStatusBarStyle {
-            return UIApplication.sharedApplication().statusBarStyle
+        fileprivate override var preferredStatusBarStyle : UIStatusBarStyle {
+            return UIApplication.shared.statusBarStyle
         }
         
     }

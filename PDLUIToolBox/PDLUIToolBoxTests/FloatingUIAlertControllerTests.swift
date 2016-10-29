@@ -42,8 +42,8 @@ class FloatingUIAlertControllerTests: XCTestCase {
     }
 
     func test_show_PresentsFloatingAlertOnTheClassInstanceWindowRootViewController() {
-        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
+        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.cancel, handler: nil)
         subject.addAction(action)
 
         subject.alertWindow = mockWindow
@@ -63,8 +63,8 @@ class FloatingUIAlertControllerTests: XCTestCase {
             completed = true
         }
 
-        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
+        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.cancel, handler: nil)
         subject.addAction(action)
 
         subject.alertWindow = mockWindow
@@ -82,16 +82,16 @@ class FloatingUIAlertControllerTests: XCTestCase {
     }
 
     func test_viewDidDisappear_HidesTheFloatingAlertWindow() {
-        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.Cancel, handler: nil)
+        subject = FloatingUIAlertController(title: "Red Alert", message: "Whooop Whooop Whooop", preferredStyle: UIAlertControllerStyle.alert)
+        let action = UIAlertAction(title: "Beam me up, Scotty!", style: UIAlertActionStyle.cancel, handler: nil)
         subject.addAction(action)
 
         subject.alertWindow = mockWindow
-        mockWindow.hidden = false
+        mockWindow.isHidden = false
 
         subject.viewDidDisappear(false)
 
-        XCTAssertTrue(mockWindow.hidden)
+        XCTAssertTrue(mockWindow.isHidden)
     }
 
     class MockUIWindow: UIWindow {
@@ -105,7 +105,7 @@ class FloatingUIAlertControllerTests: XCTestCase {
     class MockUIViewController: UIViewController {
         let recorder = FuncRecorder()
 
-        override func presentViewController(viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
+        override func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
             recorder.recordCallFor("presentViewController", params: [viewControllerToPresent, flag, completion])
         }
     }

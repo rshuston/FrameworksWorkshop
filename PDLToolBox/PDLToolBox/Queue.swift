@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Queue {
+open class Queue {
 
     // A queue is a FIFO buffer implemented as an array of "Any?" items. Enqueue
     // operations add to the end of the array. Dequeue operations remove from
@@ -24,15 +24,15 @@ public class Queue {
         queue = fromList
     }
 
-    public func size() -> Int {
+    open func size() -> Int {
         return queue.count
     }
 
-    public func enqueue(value: Any?) {
+    open func enqueue(_ value: Any?) {
         queue.append(value)
     }
 
-    public func dequeue() -> (value: Any?, success: Bool) {
+    open func dequeue() -> (value: Any?, success: Bool) {
         var value: Any? = nil
         var success = false
         if queue.count > 0 {
@@ -42,7 +42,7 @@ public class Queue {
         return (value: value, success: success)
     }
 
-    public func clear() {
+    open func clear() {
         queue.removeAll()
     }
 

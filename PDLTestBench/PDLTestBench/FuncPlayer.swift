@@ -9,7 +9,7 @@
 import Foundation
 import PDLToolBox
 
-public class FuncPlayer {
+open class FuncPlayer {
 
     class ValueSequencer {
         var segmentedSequenceList: SegmentedSequenceList
@@ -32,7 +32,7 @@ public class FuncPlayer {
         returnValuesDictionary = [:]
     }
 
-    public func setReturnValue(value: Any?, forName name: String, forInvocation invocation: Int = 0) {
+    open func setReturnValue(_ value: Any?, forName name: String, forInvocation invocation: Int = 0) {
         let vs: ValueSequencer
         if returnValuesDictionary.keys.contains(name) {
             vs = returnValuesDictionary[name]!
@@ -44,7 +44,7 @@ public class FuncPlayer {
         vs.segmentedSequenceList.setValue(value, forIndex: index)
     }
 
-    public func getReturnValueFor(name: String, forInvocation invocation: Int = 0) -> (value: Any?, success: Bool) {
+    open func getReturnValueFor(_ name: String, forInvocation invocation: Int = 0) -> (value: Any?, success: Bool) {
         var result: (value: Any?, success: Bool) = (nil, false)
         if let vs = returnValuesDictionary[name] {
             let index = invocation < 1 ? vs.pendingInvocation : invocation
@@ -56,16 +56,16 @@ public class FuncPlayer {
         return result
     }
 
-    public func clearReturnValuesFor(name: String) {
+    open func clearReturnValuesFor(_ name: String) {
         returnValuesDictionary[name]?.segmentedSequenceList.clear()
         returnValuesDictionary[name]?.pendingInvocation = 1
     }
 
-    public func clearAllReturnValues() {
+    open func clearAllReturnValues() {
         returnValuesDictionary.removeAll()
     }
 
-    public func resetSequencerFor(name: String) {
+    open func resetSequencerFor(_ name: String) {
         returnValuesDictionary[name]?.pendingInvocation = 1
     }
     
