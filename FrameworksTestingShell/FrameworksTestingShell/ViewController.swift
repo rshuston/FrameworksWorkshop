@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             self.label.text = "Foo"
         })
         alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: { (Void) -> Void in
+        present(alertController, animated: true, completion: { () -> Void in
             self.label.text = "Bar"
         })
     }
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             action: { (UIAlertAction) -> Void in
                 self.label.text = "Foo"
             },
-            completion: { (Void) -> Void in
+            completion: { () -> Void in
                 self.label.text = "Bar"
         })
     }
