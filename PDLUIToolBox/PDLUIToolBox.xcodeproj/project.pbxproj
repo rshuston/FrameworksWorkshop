@@ -102,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				4EED562C1D3BBABE00F06F9E /* PDLUIToolBox.h */,
-				4EED562E1D3BBABE00F06F9E /* Info.plist */,
 				4EED567D1D3BBCE300F06F9E /* FloatingUIAlertController.swift */,
 				4EC98D1C1D3DDDFA0056409F /* UIViewController+Extension.swift */,
 				4EE99BB11D4C6D0B001FE09F /* UIView+Extension.swift */,
+				4EED562E1D3BBABE00F06F9E /* Info.plist */,
 			);
 			path = PDLUIToolBox;
 			sourceTree = "<group>";
@@ -114,10 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				4EED56381D3BBABE00F06F9E /* PDLUIToolBoxTests.swift */,
-				4EED563A1D3BBABE00F06F9E /* Info.plist */,
 				4EED56891D3BBF0300F06F9E /* FloatingUIAlertControllerTests.swift */,
 				4E4A8B691D3E570E00BC26D0 /* UIViewController+ExtensionTests.swift */,
 				4EE99BB51D4C6D39001FE09F /* UIView+ExtensionTests.swift */,
+				4EED563A1D3BBABE00F06F9E /* Info.plist */,
 			);
 			path = PDLUIToolBoxTests;
 			sourceTree = "<group>";

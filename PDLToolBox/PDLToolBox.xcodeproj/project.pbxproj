@@ -84,10 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				4ECE0CC01D0A494D00AAD43A /* PDLToolBox.h */,
-				4ECE0CC21D0A494D00AAD43A /* Info.plist */,
-				4ECE0CD71D0A49A400AAD43A /* SegmentedSequenceList.swift */,
 				4ECE0CD81D0A49A400AAD43A /* Stack.swift */,
 				4E31630D1D0E51E900F1FE0D /* Queue.swift */,
+				4ECE0CD71D0A49A400AAD43A /* SegmentedSequenceList.swift */,
+				4ECE0CC21D0A494D00AAD43A /* Info.plist */,
 			);
 			path = PDLToolBox;
 			sourceTree = "<group>";
@@ -96,10 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				4ECE0CCC1D0A494D00AAD43A /* PDLToolBoxTests.swift */,
-				4ECE0CCE1D0A494D00AAD43A /* Info.plist */,
-				4ECE0CDB1D0A49AF00AAD43A /* SegmentedSequenceListTests.swift */,
 				4ECE0CDC1D0A49AF00AAD43A /* StackTests.swift */,
 				4E31630F1D0E520200F1FE0D /* QueueTests.swift */,
+				4ECE0CDB1D0A49AF00AAD43A /* SegmentedSequenceListTests.swift */,
+				4ECE0CCE1D0A494D00AAD43A /* Info.plist */,
 			);
 			path = PDLToolBoxTests;
 			sourceTree = "<group>";
