@@ -1,14 +1,14 @@
 General Alerts:
 
-√   Alert - old UIAlert functionality
+√   FloatingUIAlertController - restore old UIAlert functionality
 
 View Controller Utilities:
 
-√   locate front view controller
+√   UIVIewController Extension: frontViewController() - locate front view controller
 
 View Hierarchy Utilities:
 
-√   traverse view hierarchy with handler
+√   UIVIew Extension: traverseViewHierarchy() - traverse a view hierarchy and act upon each found view
 
 Image Utilities:
 
