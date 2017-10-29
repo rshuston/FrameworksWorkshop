@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		4E0796271DA1EB7D00DB7BB3 /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphonesimulator/PDLToolBox.framework"; sourceTree = "<group>"; };
+		4E297BD91FA6194E006C7F32 /* NOTES */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTES; sourceTree = "<group>"; };
 		4E4A8B691D3E570E00BC26D0 /* UIViewController+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ExtensionTests.swift"; sourceTree = "<group>"; };
 		4EC6B8F91DC535E500344C93 /* PDLTestBench.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLTestBench.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphoneos/PDLTestBench.framework"; sourceTree = "<group>"; };
 		4EC6B8FB1DC535E900344C93 /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphoneos/PDLToolBox.framework"; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		4EED561F1D3BBABE00F06F9E = {
 			isa = PBXGroup;
 			children = (
+				4E297BD91FA6194E006C7F32 /* NOTES */,
 				4EED562B1D3BBABE00F06F9E /* PDLUIToolBox */,
 				4EED56371D3BBABE00F06F9E /* PDLUIToolBoxTests */,
 				4E0796261DA1EB7D00DB7BB3 /* Frameworks */,

@@ -1,0 +1,16 @@
+General Alerts:
+
+√   Alert - old UIAlert functionality
+
+View Controller Utilities:
+
+√   locate front view controller
+
+View Hierarchy Utilities:
+
+√   traverse view hierarchy with handler
+
+Image Utilities:
+
+    blank image creation
+    image comparison

@@ -39,6 +39,7 @@
 		4E20C4D91D0A4B5C007F7C2C /* FuncRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorder.swift; sourceTree = "<group>"; };
 		4E20C4DC1D0A4B69007F7C2C /* FuncPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncPlayerTests.swift; sourceTree = "<group>"; };
 		4E20C4DD1D0A4B69007F7C2C /* FuncRecorderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FuncRecorderTests.swift; sourceTree = "<group>"; };
+		4E297BD71FA6173C006C7F32 /* NOTES */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTES; sourceTree = "<group>"; };
 		4EC6B8F61DC5357400344C93 /* PDLToolBox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDLToolBox.framework; path = "../../../../Library/Developer/Xcode/DerivedData/FrameworksWorkshop-fsqorhubekxrodcjuyyywvtotbxm/Build/Products/Debug-iphoneos/PDLToolBox.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +67,7 @@
 		4E20C4B41D0A4AB9007F7C2C = {
 			isa = PBXGroup;
 			children = (
+				4E297BD71FA6173C006C7F32 /* NOTES */,
 				4E20C4C01D0A4AB9007F7C2C /* PDLTestBench */,
 				4E20C4CC1D0A4AB9007F7C2C /* PDLTestBenchTests */,
 				4EC6B8F51DC5357400344C93 /* Frameworks */,
